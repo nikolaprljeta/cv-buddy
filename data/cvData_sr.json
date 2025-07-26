@@ -1,0 +1,182 @@
+{
+  "name": "NIKOLA PRLJETA",
+  "summary": "Iskusan poslovni analitičar i softverski inženjer vešt u svim fazama naprednog razvoja aplikacija. Poznavalac korisničkog interfejsa, testiranja i procesa otklanjanja grešaka. Sposoban za efikasno samostalno upravljanje projektima, kao i za saradnju u timskom okruženju. Donosi ekspertizu u dizajnu, instalaciji, testiranju i održavanju iPhone i cross-platform aplikacija. Opremljen raznovrsnim i stalno proširujućim skupom veština.",
+  "contact": [
+    { "label": "Mobilni", "url": "tel:+381641948192", "icon": "fa-solid fa-phone" },
+    { "label": "Email", "url": "mailto:nikola.prljeta@gmail.com", "icon": "fa-solid fa-envelope" },
+    { "label": "Linktree", "url": "http://linktr.ee/nikolaprljeta", "icon": "fa-solid fa-link" },
+    { "label": "LinkedIn", "url": "https://rs.linkedin.com/in/nikola-prljeta-01884231", "icon": "fa-brands fa-linkedin" },
+    { "label": "GitHub", "url": "https://github.com/nikolaprljeta", "icon": "fa-brands fa-github" }
+  ],
+  "sections": {
+    "skills": {
+      "title": "RELEVANTNE VEŠTINE",
+      "items": [
+        "Timski igrač",
+        "Detaljno orijentisan",
+        "Jasan i efikasan komunikator",
+        "Nativni i cross-platform razvoj"
+      ]
+    },
+    "languages": {
+      "title": "JEZICI",
+      "items": [
+        { "label": "Engleski", "code": "en" },
+        { "label": "Švedski", "code": "sv" },
+        { "label": "Srpski", "code": "sr" }
+      ]
+    },
+    "techStack": {
+      "title": "TEHNOLOŠKI STACK",
+      "items": [
+        "React Native",
+        "iOS Razvoj",
+        "Swift",
+        "UIKit",
+        "SwiftUI",
+        "Cocoa Touch",
+        "Web Razvoj",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "Git",
+        "Java",
+        "Tapestry",
+        "Dizajn Baze Podataka",
+        "SQL"
+      ]
+    },
+    "hobbies": {
+      "title": "HOBIJ",
+      "text": "Umetnost, kultura, muzika, filmovi, fotografija, knjige, tehnologija, moda, vežbanje, biciklizam."
+    },
+    "relevantEmployment": {
+      "title": "RELEVANTNO RADNO ISKUSTVO",
+      "items": [
+        {
+          "title": "Menadžer za zemlju",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (eksterni)",
+          "location": "Beograd, Srbija",
+          "date": "Januar 2025-"
+        },
+        {
+          "title": "Mobilni programer (iOS & Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Beograd, Srbija",
+          "date": "Decembar 2023 - Januar 2025"
+        },
+        {
+          "title": "Softverski inženjer, eksterni konsultant",
+          "company": "Ledger Lemur",
+          "employer": "Lemur (eksterni)",
+          "location": "Beograd, Srbija/Amsterdam, Holandija",
+          "date": "Jun 2023-Decembar 2023"
+        },
+        {
+          "title": "Softverski inženjer",
+          "company": "Aer Lingus",
+          "employer": "Endava d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "Decembar 2022-Jun 2023"
+        },
+        {
+          "title": "iOS Programer, UI/UX",
+          "company": "eZdravlje",
+          "employer": "Nites d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2016-2022"
+        },
+        {
+          "title": "IT Konsultant",
+          "company": "Telekom Srbija CRM",
+          "employer": "Nites d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2016-2022"
+        }
+      ]
+    },
+    "relevantEducation": {
+      "title": "RELEVANTNO OBRAZOVANJE",
+      "items": [
+        {
+          "title": "IT inženjer, Fakultet informacionih tehnologija",
+          "description": "Diplomirao sam na Fakultetu informacionih tehnologija na Univerzitetu Metropolitan sa zvanjem IT inženjera."
+        },
+        {
+          "title": "Kungsholmens gymnasium, Stokholm, Švedska",
+          "description": "Srednja škola"
+        },
+        {
+          "title": "Englebrektsskolan, Stokholm, Švedska",
+          "description": "Osnovna škola"
+        }
+      ]
+    },
+    "courses": {
+      "title": "KURSEVI",
+      "items": [
+        {
+          "title": "Code With Mosh: The Ultimate React Native Series",
+          "description": "Kurs o izgradnji React aplikacija od Mosha Hamedanija"
+        },
+        {
+          "title": "Code With Mosh: The Ultimate JS Series",
+          "description": "Detaljan kurs o JS-u i njegovim najnovijim dostignućima od Mosha Hamedanija"
+        },
+        {
+          "title": "Hacking With Swift: 100 Days of Swift",
+          "description": "Kurs o Apple-ovom Swift jeziku koristeći njihove UIKit i SwiftUI frameworke od Paula Hudsona"
+        }
+      ]
+    },
+    "references": {
+      "title": "REFERENCE",
+      "items": [
+        "Rade Radumilo iz Optimal Systems GmbH",
+        "Nikola Stamatović iz Otilio d.o.o."
+      ]
+    },
+    "otherEmployment": {
+      "title": "OSTALI POSLOVI",
+      "items": [
+        {
+          "title": "Frilanser Saradnik",
+          "company": "Cathode TV",
+          "employer": "Otilio d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2017-2018"
+        },
+        {
+          "title": "Frilanser Saradnik",
+          "company": "NoQue",
+          "employer": "Otilio d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2017-2018"
+        },
+        {
+          "title": "Frilanser Saradnik",
+          "company": "Salt",
+          "employer": "Otilio d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2016-2017"
+        },
+        {
+          "title": "Moderator, Administrator",
+          "company": "Content Flow Management",
+          "employer": "Steady Health",
+          "location": "Beograd, Srbija / San Francisko, CA",
+          "date": "2015-2016"
+        },
+        {
+          "title": "Community Manager",
+          "company": "Belgrade Fair Marketing Campaign",
+          "employer": "Juventa Group",
+          "location": "Belgrad, Srbija",
+          "date": "2006"
+        }
+      ]
+    }
+  }
+}

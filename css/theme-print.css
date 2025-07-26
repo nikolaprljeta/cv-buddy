@@ -1,0 +1,355 @@
+/* theme-print.css */
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+    body {
+        font-family: 'Times New Roman', serif;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0;
+        font-size: 1.35rem;
+        line-height: 1.45;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        text-align: justify;
+        orphans: 3;
+        widows: 3;
+    }
+
+    * {
+        color: #000000 !important;
+    }
+
+    .cv-container {
+        box-shadow: none !important;
+        border: none !important;
+        background-color: #ffffff !important;
+        width: 100 !important;
+        max-width: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+        border-radius: 0;
+        overflow: visible !important;
+    }
+    .cv-container:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .print-button,
+    .contact-buttons-section,
+    .profile-image:hover,
+    .language-button.active,
+    .language-selection-buttons,
+    .summary,
+    .contact-links,
+    .fab-container /* Hide the FAB in print view */
+    {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+        visibility: visible !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .header-section {
+        background: #fefefe !important;
+        border-bottom: 0.2rem solid #000000 !important;
+        padding: 2.5rem 2.8rem 2rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        margin-bottom: 2.8rem !important;
+        gap: 2.8rem !important;
+        position: relative;
+    }
+
+    .header-left-block {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        flex-shrink: 0 !important;
+        max-width: 20rem;
+        flex-grow: 1 !important;
+        text-align: right !important;
+    }
+
+    .profile-image-container {
+        width: 15rem !important;
+        height: 15rem !important;
+        margin-bottom: 1.2rem !important;
+        margin-right: 0 !important;
+        float: none !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        border: 0.15rem solid #333333 !important;
+        box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1) !important;
+        border-radius: 0.4rem !important;
+        overflow: hidden !important;
+    }
+
+    .profile-image {
+        border: none !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 0.2rem !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+        filter: none !important;
+    }
+
+    .header-info-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        width: 100 !important;
+    }
+
+    #name {
+        font-family: 'Arial Black', sans-serif !important;
+        font-size: 3.6rem !important;
+        font-weight: 900 !important;
+        margin-bottom: 0.6rem !important;
+        line-height: 1 !important;
+        text-transform: uppercase !important;
+        text-align: right !important;
+        letter-spacing: 0.05rem !important;
+    }
+
+    .print-contact-details {
+        display: block !important;
+        font-family: 'Arial', sans-serif !important;
+        font-size: 1.25rem !important;
+        margin-top: 0.6rem !important;
+        line-height: 1.25 !important;
+        text-align: right !important;
+    }
+    .print-contact-details p {
+        margin: 0.2rem 0 !important;
+    }
+
+    .print-summary-container {
+        flex-grow: 1 !important;
+        font-size: 1.5rem !important;
+        line-height: 1.6 !important;
+        text-align: justify !important;
+        margin-top: 0 !important;
+        padding-top: 0.5rem;
+        padding-left: 1.5rem;
+        border-left: 0.1rem solid #cccccc;
+    }
+    .print-summary-container p::first-letter {
+        float: left;
+        font-family: 'Playfair Display', serif;
+        font-size: 6.8rem;
+        line-height: 5.5rem;
+        padding-right: 1rem;
+        padding-left: 0.2rem;
+        font-weight: bold;
+    }
+
+
+    .main-content {
+        padding: 0 2.8rem 1.5rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        page-break-after: auto !important;
+        page-break-inside: auto !important;
+        overflow: visible !important;
+    }
+    .left-column, .right-column {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        min-width: 0;
+        text-align: justify !important;
+        display: block !important;
+    }
+    .left-column {
+        flex: 1 !important;
+        border-right: 0.1rem solid #cccccc !important;
+        padding-right: 2.4rem !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .right-column {
+        flex: 2 !important;
+        padding-left: 2.4rem !important;
+    }
+
+    .section-title {
+        font-family: 'Arial Black', sans-serif !important;
+        font-size: 2.1rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 1.2rem !important;
+        text-transform: uppercase !important;
+        border-bottom: 0.15rem solid #000000 !important;
+        padding-bottom: 0.6rem !important;
+        margin-top: 2.8rem !important;
+        letter-spacing: 0.03rem !important;
+        page-break-after: avoid !important;
+    }
+    .section-item:first-child .section-title {
+        margin-top: 0 !important;
+    }
+
+    .section-item {
+        page-break-inside: avoid !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .section-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
+
+    .job-title,
+    .education-degree,
+    .course-title,
+    .other-employment-title {
+        font-family: 'Times New Roman', serif !important;
+        font-size: 1.7rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.5rem !important;
+        page-break-after: avoid !important;
+    }
+
+    .employer-school,
+    .course-provider {
+        font-size: 1.4rem !important;
+        font-weight: 500 !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .employer-location,
+    .date-range,
+    .course-description {
+        font-size: 1.3rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .job-description,
+    .education-description {
+        font-size: 1.4rem !important;
+        line-height: 1.5 !important;
+        margin-top: 0.8rem !important;
+        text-align: justify !important;
+    }
+
+    .job-description p, .education-description p, #hobbiesText p {
+        display: block;
+    }
+
+    .job-description ul,
+    .education-description ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0.8rem;
+    }
+
+    .job-description ul li,
+    .education-description ul li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+    }
+
+    .job-description ul li::before,
+    .education-description ul li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        color: #666666;
+        font-weight: 700;
+    }
+
+    /* Ensure specific content containers avoid splitting */
+    /* Removed page-break-inside from larger content containers to allow better flow */
+    /* #relevantEmployment,
+    #relevantEducation,
+    #coursesList,
+    #otherEmployment {
+        page-break-inside: avoid !important;
+    } */
+
+    /* Prevent page break before the first entry in each detailed section */
+    #relevantEmployment > .job-entry:first-child,
+    #relevantEducation > .education-entry:first-child,
+    #coursesList > .course-entry:first-child,
+    #otherEmployment > .other-employment-entry:first-child {
+        page-break-before: avoid !important;
+        margin-top: 0 !important;
+    }
+
+    .job-entry,
+    .education-entry,
+    .course-entry,
+    .other-employment-entry {
+        page-break-inside: avoid !important;
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
+    }
+    .job-entry:last-child,
+    .education-entry:last-child,
+    .course-entry:last-child,
+    .other-employment-entry:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .bullet-list {
+        page-break-inside: avoid !important;
+    }
+    .bullet-list li {
+        page-break-inside: avoid !important;
+        list-style: none !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+    }
+    .bullet-list li::before {
+        content: none !important;
+    }
+
+    .print-only-language-label {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+    }
+    .print-only-language-label span {
+        font-weight: 400;
+    }
+
+    #languagesPrintList {
+        display: block !important;
+        list-style: none !important;
+        padding-left: 0 !important;
+        margin-bottom: 0 !important;
+        page-break-inside: avoid !important;
+    }
+
+    #languagesPrintList li {
+        position: relative !important;
+        padding-left: 0 !important;
+        margin-bottom: 0.8rem !important;
+        line-height: 1.45 !important;
+        page-break-inside: avoid !important;
+        text-align: left !important;
+    }
+
+    #languagesPrintList li::before {
+        content: none !important;
+    }
+}

@@ -1,0 +1,870 @@
+/* style.css */
+
+/* General body styles for cv.html - Centering the main content */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 2rem; /* Add some padding around the main CV container */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    background-color: #f3f4f6; /* Light theme background */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    color: #333333; /* Default text color for light theme */
+}
+
+/* CV Container - should be centered by body flexbox */
+.cv-container {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem -0.2rem rgba(0, 0, 0, 0.1), 0 0.4rem 0.8rem -0.1rem rgba(0, 0, 0, 0.06);
+    max-width: 90rem; /* Max width for the CV content */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.cv-container:hover {
+    box-shadow: 0 1.5rem 2rem -0.4rem rgba(0, 0, 0, 0.12), 0 0.6rem 0.8rem -0.3rem rgba(0, 0, 0, 0.08);
+}
+/* Removed profile-image:hover here as it's handled by .profile-image-container below */
+
+.name {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+.summary {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    max-width: 70rem;
+    margin: 0 auto 2.4rem;
+    text-align: justify;
+}
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.job-description,
+.education-description {
+    text-align: justify;
+}
+.language-selection-buttons .language-button:hover {
+    color: #1d4ed8;
+}
+.language-selection-buttons .language-button.active {
+    color: #1d4ed8;
+}
+
+/* Floating Action Button (FAB) Styles */
+.fab-container {
+    position: fixed; /* Keep it fixed relative to the viewport */
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse; /* Stacks items from bottom to top */
+    align-items: flex-end;
+    gap: 1rem; /* Gap between main button and the sub-buttons container */
+}
+
+.fab-main-button,
+.fab-sub-button {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Main FAB (plus button) should be red */
+.fab-main-button {
+    background-color: #ef4444; /* Red color */
+    position: relative;
+}
+
+.fab-main-button:hover {
+    background-color: #dc2626; /* Darker red for hover */
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 0.8rem rgba(0, 0, 0, 0.15), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.08);
+}
+
+.fab-icon-plus,
+.fab-icon-times {
+    position: absolute;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out; /* Adjusted transition */
+}
+
+.fab-icon-times {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.fab-container.expanded .fab-icon-plus {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.fab-container.expanded .fab-icon-times {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.fab-sub-buttons {
+    display: flex;
+    flex-direction: column-reverse; /* Stacks sub-buttons from bottom to top */
+    align-items: flex-end;
+    gap: 1rem; /* Gap between individual sub-buttons */
+
+    /* Initial state: collapsed */
+    max-height: 0; /* Use max-height for smooth transition */
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* Start slightly below the main button */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out; /* Added transform to transition */
+    pointer-events: none;
+}
+
+.fab-container.expanded .fab-sub-buttons {
+    max-height: 20rem; /* A value larger than expected total height of sub-buttons */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Move to original position */
+    pointer-events: auto;
+}
+
+/* All sub-buttons (print, edit, upload) should be gray */
+.fab-sub-button {
+    background-color: #6b7280; /* Gray color */
+}
+
+.fab-sub-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.6rem 0.8rem rgba(0, 0, 0, 0.15), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.08);
+    background-color: #4b5563; /* Darker gray for hover */
+}
+
+/* Make icons inside gray sub-buttons red - ULTRA SPECIFIC */
+#fabPrintButton i,
+#fabEditButton i,
+#fabUploadCvDataButton i {
+    color: #ef4444 !important; /* Red color for icons, forced with ID specificity */
+}
+
+
+/* Tooltips for sub-buttons */
+.fab-sub-button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 0.8rem);
+    transform: translateY(-50%);
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.fab-sub-button:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Styles for the CV Editor (edit.html specific) */
+.editor-page-body { /* Class for edit.html's body */
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for editor */
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    color: #333333; /* Default text color for light theme */
+}
+
+.editor-container { /* This now acts as the main wrapper for the editor content, similar to cv-container but for editing */
+    background-color: #ffffff;
+    padding: 2rem; /* Adjusted padding for editor */
+    border-radius: 0.8rem;
+    box-shadow: 0 0.8rem 1.2rem -0.2rem rgba(0, 0, 0, 0.08), 0 0.3rem 0.4rem -0.1rem rgba(0, 0, 0, 0.03);
+    max-width: 90rem; /* Match cv-container max-width */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    gap: 2rem; /* Gap between main sections */
+    box-sizing: border-box;
+}
+
+.main-title { /* For H1 on edit page */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    text-align: center; /* Center the main title */
+}
+.section-subtitle { /* For H2 on edit page, now used for collapsible toggles */
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* CV Layout specific styles for edit.html and cv.html */
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Profile Image Fix --- */
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Ensure anything outside the circle is clipped */
+    background-color: #f9fafb; /* Default light background for the container */
+    border: 3px solid #3b82f6; /* MOVED BLUE BORDER HERE */
+    box-shadow: 0 0.4rem 0.6rem -0.1rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem -0.1rem rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for container scale and shadow */
+}
+
+.profile-image-container:hover {
+    transform: scale(1.08); /* Slightly enlarge the container */
+    box-shadow: 0 0 0 0.8rem rgba(59, 130, 246, 0.3); /* Blue glow on hover, applied to container */
+}
+
+.profile-image {
+    width: 100%; /* Make image fill its container */
+    height: 100%; /* Make image fill its container */
+    object-fit: cover;
+    border-radius: 50%; /* Ensure the image itself is circular */
+    border: none; /* REMOVED BORDER FROM HERE */
+    transition: transform 0.3s ease; /* Only transform for image */
+}
+
+/* Hover effect for the image, now applied to the image itself */
+.profile-image-container:hover .profile-image { /* Apply image transform when container is hovered */
+    transform: scale(1.15) rotate(5deg); /* Enlarge and rotate the image within the scaled container */
+}
+/* --- End Profile Image Fix --- */
+
+
+.name-input-field { /* Specific style for the name input */
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-bottom: 1px dashed #d1d5db; /* Dotted line for editable field */
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    color: #333333;
+}
+.name-input-field:focus {
+    border-bottom-color: #3b82f6;
+    box-shadow: none;
+}
+
+.summary-textarea { /* Specific style for the summary textarea */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 70rem;
+    margin: 0 auto 2.4rem;
+    text-align: justify;
+    border: 1px dashed #d1d5db; /* Dotted line for editable field */
+    padding: 1rem;
+    min-height: 100px;
+    background-color: transparent;
+    color: #333333;
+}
+.summary-textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    gap: 2rem; /* Gap between columns */
+}
+
+.left-column {
+    flex: 1; /* Take up remaining space */
+    min-width: 300px; /* Minimum width before wrapping */
+    padding-right: 1rem; /* Padding for separation */
+    border-right: 1px solid #e5e7eb; /* Separator line */
+}
+
+.right-column {
+    flex: 2; /* Take up more space */
+    min-width: 400px; /* Minimum width before wrapping */
+    padding-left: 1rem; /* Padding for separation */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack columns vertically */
+    }
+    .left-column {
+        border-right: none; /* Remove vertical separator */
+        padding-right: 0;
+        border-bottom: 1px solid #e5e7eb; /* Add horizontal separator */
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+    .right-column {
+        padding-left: 0;
+    }
+}
+
+
+.section-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+}
+.input-group {
+    margin-bottom: 0.8rem;
+}
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #374151;
+}
+/* Unified styling for all text inputs and textareas (general) */
+.input-group input[type="text"],
+.input-group input[type="url"],
+.input-group input[type="tel"],
+.input-group input[type="email"],
+.input-group textarea:not(.summary-textarea) /* Exclude summary textarea */
+{
+    width: 100%;
+    padding: 0.8rem 1rem; /* Standardized padding */
+    border: 1px solid #d1d5db; /* Standardized border */
+    border-radius: 0.4rem; /* Standardized border-radius */
+    font-size: 1rem; /* Standardized font size */
+    color: #4b5563;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+}
+.input-group input:focus,
+.input-group textarea:focus:not(.summary-textarea)
+{
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+.input-group textarea {
+    min-height: 80px; /* Slightly increased min-height for textareas */
+    resize: vertical;
+}
+/* Unified styling for all buttons */
+.btn {
+    padding: 0.8rem 1.5rem; /* Standardized padding for all buttons */
+    border-radius: 0.5rem; /* Slightly larger border-radius for softer look */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem; /* Standardized gap */
+    font-size: 1rem; /* Standardized font size */
+    border: none; /* Ensure no default browser border */
+}
+.btn-primary {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+.btn-secondary {
+    background-color: #6b7280;
+    color: #ffffff;
+}
+.btn-secondary:hover {
+    background-color: #4b5563;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-danger {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+.btn-danger:hover {
+    background-color: #dc2626;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+}
+.btn-outline:hover {
+    background-color: #e0e7ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+/* Small button variation for remove-item-btn */
+.btn-small {
+    padding: 0.5rem 0.8rem; /* Smaller padding */
+    font-size: 0.8rem; /* Smaller font size */
+    border-radius: 0.4rem; /* Slightly smaller border-radius */
+    gap: 0.4rem;
+}
+
+.flex-row-wrap { /* Replaced flex-row-wrap */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Standardized gap */
+    margin-bottom: 1.5rem; /* Standardized margin */
+}
+.dynamic-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Standardized gap */
+    margin-bottom: 0.8rem; /* Standardized margin */
+    flex-wrap: wrap; /* Allow wrapping if space is constrained, but prefer inline */
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.8rem;
+}
+/* Specific styling for inputs directly within .dynamic-item to ensure they sit next to the button */
+.dynamic-item input[type="text"] {
+    flex-grow: 1; /* Allow input to grow and take available space */
+    width: auto; /* Override 100% width from general input style */
+    min-width: 150px; /* Ensure a reasonable minimum width */
+}
+.dynamic-item .remove-item-btn {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    margin-left: auto; /* Push button to the right if there's extra space */
+}
+
+
+.dynamic-section-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.6rem;
+    padding: 1.5rem; /* Slightly increased padding */
+    margin-bottom: 1.5rem; /* Standardized margin */
+    background-color: #f9fafb;
+    position: relative;
+}
+.dynamic-section-item .btn-danger {
+    position: absolute;
+    top: 1rem; /* Adjusted position */
+    right: 1rem; /* Adjusted position */
+    padding: 0.5rem 0.8rem; /* Standardized with btn-small */
+    font-size: 0.8rem; /* Standardized with btn-small */
+}
+.message-box {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green for success */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.message-box.active {
+    opacity: 1;
+    visibility: visible;
+}
+.message-box.error {
+    background-color: #f44336; /* Red for error */
+}
+
+/* Language Tabs specific styles */
+.language-tabs-container {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 1px;
+}
+
+.language-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    align-items: flex-end;
+}
+
+.language-tab {
+    padding: 0.6rem 1rem;
+    border: 1px solid #d1d5db;
+    border-bottom: none;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1px;
+}
+
+.language-tab:hover {
+    background-color: #d1d5db;
+}
+
+.language-tab.active {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+    border-bottom-color: transparent;
+    color: #3b82f6;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.language-tab .delete-lang-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.language-tab .delete-lang-btn:hover {
+    color: #ef4444;
+    background-color: #fecaca;
+}
+
+/* Style for the Add Language Tab Button - Chrome-like */
+.add-language-tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 0.5rem;
+    width: auto;
+    height: auto;
+    min-width: 2.8rem;
+    min-height: 2.8rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+    margin-left: 0.5rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1px;
+}
+
+.add-language-tab-button:hover {
+    color: #3b82f6;
+}
+
+.add-language-tab-button i {
+    color: #4b5563;
+}
+
+
+/* Custom Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+.modal-content .modal-title { /* Replaced text-xl font-semibold mb-4 */
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+.modal-content .modal-input-group { /* Replaced mb-4 */
+    margin-bottom: 1.6rem;
+}
+.modal-content input {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: 1px solid #d1d5db;
+}
+.modal-button-group { /* Replaced flex justify-center gap-4 */
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem; /* Increased gap for buttons */
+}
+
+/* Collapsible Section Styles */
+.collapsible-section .collapsible-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.6rem; /* Match section-header padding */
+    border-bottom: 1px solid #e5e7eb; /* Match section-header border */
+    margin-bottom: 1rem; /* Match section-header margin */
+}
+
+.collapsible-section .toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.collapsible-section.expanded .toggle-icon {
+    transform: rotate(180deg); /* Rotate icon when expanded */
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smooth transition for collapsing/expanding */
+}
+
+.collapsible-section.expanded .collapsible-content {
+    max-height: 1000px; /* A large enough value to accommodate content */
+    /* This value might need adjustment based on the actual content height.
+       A more robust solution would involve JavaScript calculating the actual height. */
+}
+
+/* Specific margin classes for consistency */
+.margin-top-large { /* Replaced mt-6 */
+    margin-top: 2.4rem;
+}
+.margin-top-small { /* Replaced mt-2 */
+    margin-top: 0.8rem;
+}
+.button-group-bottom { /* Replaced flex justify-end gap-4 mt-8 */
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.6rem;
+    margin-top: 3.2rem;
+}
+
+
+/* Dark mode adjustments for all elements */
+@media (prefers-color-scheme: dark) {
+    /* General dark theme backgrounds and text */
+    body {
+        background-color: #1a1a1a;
+        color: #f3f4f6; /* Light text color for dark theme */
+    }
+    .editor-page-body { /* Specific dark mode for edit.html body */
+        background-color: #1a1a1a;
+    }
+    .editor-container {
+        background-color: #2d2d2d;
+        box-shadow: 0 0.8rem 1.2rem -0.2rem rgba(0, 0, 0, 0.2), 0 0.3rem 0.4rem -0.1rem rgba(0, 0, 0, 0.1);
+    }
+    .main-title, .section-subtitle { /* Dark mode titles */
+        color: #f3f4f6;
+    }
+    .section-header {
+        border-bottom-color: #444444;
+    }
+    .input-group label {
+        color: #d1d5db;
+    }
+    /* Unified styling for all text inputs and textareas in dark mode */
+    .input-group input[type="text"],
+    .input-group input[type="url"],
+    .input-group input[type="tel"],
+    .input-group input[type="email"],
+    .input-group textarea,
+    .dynamic-item input[type="text"] { /* Include dynamic item inputs here */
+        background-color: #3a3a3a;
+        border-color: #555555;
+        color: #f3f4f6;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus,
+    .dynamic-item input[type="text"]:focus { /* Include dynamic item inputs here */
+        border-color: #63b3ed;
+        box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.3);
+    }
+    .dynamic-item {
+        border-bottom-color: #444444;
+    }
+    .dynamic-section-item {
+        background-color: #3a3a3a;
+        border-color: #555555;
+    }
+
+    /* Language Tabs in dark mode */
+    .language-tabs-container {
+        border-bottom-color: #444444;
+    }
+    .language-tab {
+        background-color: #3a3a3a;
+        border-color: #555555;
+        color: #d1d5db;
+    }
+    .language-tab:hover {
+        background-color: #4a4a4a;
+    }
+    .language-tab.active {
+        background-color: #2d2d2d;
+        border-color: #555555;
+        border-bottom-color: transparent;
+        color: #63b3ed;
+    }
+    .language-tab .delete-lang-btn {
+        color: #a0a0a0;
+    }
+    .language-tab .delete-lang-btn:hover {
+        color: #ef4444;
+        background-color: rgba(239, 68, 68, 0.2);
+    }
+
+    /* Add Language Button in dark mode */
+    .add-language-tab-button i {
+        color: #d1d5db !important;
+    }
+    .add-language-tab-button:hover {
+        color: #63b3ed !important;
+    }
+
+    /* Custom Modal in dark mode */
+    .modal-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .modal-content {
+        background-color: #2d2d2d;
+        color: #f3f4f6;
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.5);
+    }
+    .modal-content input {
+        background-color: #3a3a3a;
+        border-color: #555555;
+        color: #f3f4f6;
+    }
+    .modal-content input:focus {
+        border-color: #63b3ed;
+        box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.3);
+    }
+    .modal-content .btn-primary {
+        background-color: #63b3ed;
+        color: #1a1a1a;
+    }
+    .modal-content .btn-primary:hover {
+        background-color: #3b82f6;
+    }
+    .modal-content .btn-secondary {
+        background-color: #555555;
+        color: #f3f4f6;
+    }
+    .modal-content .btn-secondary:hover {
+        background-color: #444444;
+    }
+
+    /* FAB buttons in dark mode (re-confirming previous fixes) */
+    .fab-main-button {
+        background-color: #e94560 !important;
+    }
+    .fab-main-button:hover {
+        background-color: #d83a56 !important;
+    }
+    .fab-sub-button {
+        background-color: #444444 !important;
+    }
+    .fab-sub-button:hover {
+        background-color: #555555 !important;
+    }
+    #fabPrintButton i,
+    #fabEditButton i,
+    #fabUploadCvDataButton i {
+        color: #e94560 !important;
+    }
+    .fab-sub-button::before {
+        background-color: rgba(233, 69, 96, 0.5);
+    }
+
+    /* Styling for the remove-item-btn in dynamic lists in dark mode */
+    .dynamic-item .remove-item-btn {
+        background-color: #ef4444; /* Red background for the trash button */
+        color: #ffffff; /* White icon */
+    }
+
+    .dynamic-item .remove-item-btn:hover {
+        background-color: #dc2626; /* Darker red on hover */
+    }
+
+    /* Collapsible section dark mode styles */
+    .collapsible-section .collapsible-toggle {
+        color: #f3f4f6; /* Light text for toggles */
+        border-bottom-color: #444444; /* Darker border */
+    }
+    .collapsible-section .toggle-icon {
+        color: #d1d5db; /* Light gray icon */
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit CV Data</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Consolidated CSS files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-light.css" media="(prefers-color-scheme: light), all">
+    <link rel="stylesheet" href="../css/theme-dark.css" media="(prefers-color-scheme: dark)">
+
+</head>
+<body>
+    <div class="editor-container">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Edit CV Data</h1>
+
+        <!-- Language Tabs Section -->
+        <div class="language-tabs-container mb-6">
+            <div id="languageTabs" class="language-tabs">
+                <!-- Language tabs will be rendered here by JavaScript -->
+            </div>
+            <!-- Updated Add Language Button to be part of the tabs flow -->
+            <button type="button" id="addLanguageTabBtn" class="add-language-tab-button" title="Add New Language"><i class="fas fa-plus"></i></button>
+        </div>
+
+        <form id="cvEditForm">
+            <!-- Personal Information -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Personal Information</h2>
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+                <div class="input-group">
+                    <label for="summary">Summary</label>
+                    <textarea id="summary" placeholder="Your professional summary" rows="4"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="hobbiesText">Hobbies</label>
+                    <textarea id="hobbiesText" placeholder="Comma-separated hobbies (e.g., Art, music, cycling)" rows="2"></textarea>
+                </div>
+            </section>
+
+            <!-- Contact Links -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Contact Links</h2>
+                <div id="contactLinksContainer">
+                    <!-- Dynamic contact links will be rendered here -->
+                </div>
+                <button type="button" id="addContactLink" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Contact Link</button>
+            </section>
+
+            <!-- Skills -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Relevant Skills</h2>
+                <div id="skillsContainer">
+                    <!-- Dynamic skills will be rendered here -->
+                </div>
+                <button type="button" id="addSkill" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Skill</button>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Tech Stack</h2>
+                <div id="techStackContainer">
+                    <!-- Dynamic tech stack items will be rendered here -->
+                </div>
+                <button type="button" id="addTechStack" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Tech Stack Item</button>
+            </section>
+
+            <!-- Relevant Employment -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Relevant Employment</h2>
+                <div id="relevantEmploymentContainer">
+                    <!-- Dynamic employment entries will be rendered here -->
+                </div>
+                <button type="button" id="addRelevantEmployment" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Employment Entry</button>
+            </section>
+
+            <!-- Relevant Education -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Relevant Education</h2>
+                <div id="relevantEducationContainer">
+                    <!-- Dynamic education entries will be rendered here -->
+                </div>
+                <button type="button" id="addRelevantEducation" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Education Entry</button>
+            </section>
+
+            <!-- Courses -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Courses</h2>
+                <div id="coursesContainer">
+                    <!-- Dynamic course entries will be rendered here -->
+                </div>
+                <button type="button" id="addCourse" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Course Entry</button>
+            </section>
+
+            <!-- Other Employment -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">Other Employment</h2>
+                <div id="otherEmploymentContainer">
+                    <!-- Dynamic other employment entries will be rendered here -->
+                </div>
+                <button type="button" id="addOtherEmployment" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Other Employment Entry</button>
+            </section>
+
+            <!-- References (simple list) -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 section-header">References</h2>
+                <div id="referencesContainer">
+                    <!-- Dynamic references will be rendered here -->
+                </div>
+                <button type="button" id="addReference" class="btn btn-secondary btn-small"><i class="fas fa-plus"></i> Add Reference</button>
+            </section>
+
+            <div class="flex justify-between items-center mt-6">
+                <button type="button" id="saveCvData" class="btn btn-primary text-base"><i class="fas fa-save"></i> Save CV Data</button>
+                <a href="cv.html" class="btn btn-secondary text-base"><i class="fas fa-arrow-left"></i> Back to CV</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Message Box for notifications -->
+    <div id="messageBox" class="message-box"></div>
+
+    <!-- Custom Modal for confirmations/prompts -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modalTitle" class="text-lg font-bold mb-4"></h3>
+            <p id="modalMessage" class="mb-6"></p>
+            <input type="text" id="modalInput1" class="hidden w-full p-2 border rounded mb-2" placeholder="Label">
+            <input type="text" id="modalInput2" class="hidden w-full p-2 border rounded mb-4" placeholder="Code">
+            <div class="flex justify-end gap-3">
+                <button id="modalCancel" class="btn btn-secondary">Cancel</button>
+                <button id="modalConfirm" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/edit.js"></script>
+</body>
+</html>

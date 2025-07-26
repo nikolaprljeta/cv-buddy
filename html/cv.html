@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikola Prljeta CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-light.css" media="(prefers-color-scheme: light), all">
+    <link rel="stylesheet" href="../css/theme-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="../css/theme-print.css" media="print">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header-section">
+            <div class="header-left-block">
+                <div class="profile-image-container">
+                    <img src="../assets/profile.jpg" alt="Nikola Prljeta Profile Picture" class="profile-image" id="profileImage">
+                </div>
+                <div class="header-info-wrapper">
+                    <h1 class="name" id="name"></h1>
+                    <div class="print-contact-details print-only">
+                        <p id="printPhoneNumber"></p>
+                        <p id="printEmail"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="print-summary-container print-only">
+                <p id="printSummary" class="print-summary-text"></p>
+            </div>
+            <div class="header-details-wrapper">
+                <p class="summary" id="summary"></p>
+                <div class="contact-links" id="contactLinks">
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="left-column">
+                <div class="section-item">
+                    <h2 class="section-title" id="languagesTitle"></h2>
+                    <ul class="bullet-list language-selection-buttons" id="languagesList"></ul>
+                    <ul class="bullet-list print-only" id="languagesPrintList"></ul>
+                </div>
+
+                <div class="section-item">
+                    <h2 class="section-title" id="skillsTitle"></h2>
+                    <ul class="bullet-list" id="skillsList"></ul>
+                </div>
+
+                <div class="section-item">
+                    <h2 class="section-title" id="hobbiesTitle"></h2>
+                    <p class="text-gray-800 leading-relaxed" id="hobbiesText"></p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="section-item">
+                    <h2 class="section-title" id="relevantEmploymentTitle"></h2>
+                    <div id="relevantEmployment"></div>
+                </div>
+
+                <div class="section-item">
+                    <h2 class="section-title" id="relevantEducationTitle"></h2>
+                    <div id="relevantEducation"></div>
+                </div>
+
+                <div class="section-item">
+                    <h2 class="section-title" id="coursesTitle"></h2>
+                    <div id="coursesList"></div>
+                </div>
+
+                <div class="section-item">
+                    <h2 class="section-title" id="referencesTitle"></h2>
+                    <ul class="bullet-list" id="referencesList"></ul>
+                </div>
+
+                <div class="section-item">
+                    <h2 class="section-title" id="otherEmploymentTitle"></h2>
+                    <div id="otherEmployment"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="profileImageModal" class="modal-overlay">
+        <div class="modal-content">
+            <img src="" alt="Enlarged Profile Picture" id="enlargedProfileImage" class="enlarged-profile-image">
+        </div>
+    </div>
+
+    <!-- Floating Action Button Container -->
+    <div class="fab-container">
+        <button class="fab-main-button" id="fabMainButton">
+            <i class="fas fa-plus fab-icon-plus"></i>
+            <i class="fas fa-times fab-icon-times"></i>
+        </button>
+        <div class="fab-sub-buttons">
+            <button class="fab-sub-button" id="fabPrintButton" data-tooltip="Print Resumé">
+                <i class="fas fa-print"></i>
+            </button>
+            <a href="edit.html" class="fab-sub-button" id="fabEditButton" data-tooltip="Edit CV Data">
+                <i class="fas fa-edit"></i>
+            </a>
+            <!-- New Upload CV Data Button -->
+            <button type="button" id="fabUploadCvDataButton" class="fab-sub-button" data-tooltip="Upload CV Data">
+                <i class="fas fa-upload"></i>
+            </button>
+            <input type="file" id="cvFileInput" accept=".json" class="hidden">
+        </div>
+    </div>
+
+    <script src="../js/cv.js"></script>
+</body>
+</html>

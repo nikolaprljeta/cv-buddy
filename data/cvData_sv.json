@@ -1,0 +1,182 @@
+{
+  "name": "NIKOLA PRLJETA",
+  "summary": "Erfaren affärsanalytiker och mjukvaruingenjör med kompetens inom alla stadier av avancerad apputveckling. Kunnig inom användargränssnitt, testning och felsökningsprocesser. Kan effektivt självhantera oberoende projekt, samt samarbeta i teammiljöer. Besitter expertis inom design, installation, testning och underhåll av iPhone- och plattformsoberoende applikationer. Utrustad med en mångsidig och ständigt växande kompetens.",
+  "contact": [
+    { "label": "Mobil", "url": "tel:+381641948192", "icon": "fa-solid fa-phone" },
+    { "label": "E-post", "url": "mailto:nikola.prljeta@gmail.com", "icon": "fa-solid fa-envelope" },
+    { "label": "Linktree", "url": "http://linktr.ee/nikolaprljeta", "icon": "fa-solid fa-link" },
+    { "label": "LinkedIn", "url": "https://rs.linkedin.com/in/nikola-prljeta-01884231", "icon": "fa-brands fa-linkedin" },
+    { "label": "GitHub", "url": "https://github.com/nikolaprljeta", "icon": "fa-brands fa-github" }
+  ],
+  "sections": {
+    "skills": {
+      "title": "RELEVANTA FÄRDIGHETER",
+      "items": [
+        "Lagspelare",
+        "Detaljorienterad",
+        "Tydlig och effektiv kommunikatör",
+        "Inhemsk och plattformsoberoende utveckling"
+      ]
+    },
+    "languages": {
+      "title": "SPRÅK",
+      "items": [
+        { "label": "Engelska", "code": "en" },
+        { "label": "Svenska", "code": "sv" },
+        { "label": "Serbiska", "code": "sr" }
+      ]
+    },
+    "techStack": {
+      "title": "TEKNISK STACK",
+      "items": [
+        "React Native",
+        "iOS-utveckling",
+        "Swift",
+        "UIKit",
+        "SwiftUI",
+        "Cocoa Touch",
+        "Webbutveckling",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "Git",
+        "Java",
+        "Tapestry",
+        "Databasdesign",
+        "SQL"
+      ]
+    },
+    "hobbies": {
+      "title": "HOBBIES",
+      "text": "Konst, kultur, musik, filmer, fotografi, böcker, teknik, mode, träning, cykling."
+    },
+    "relevantEmployment": {
+      "title": "RELEVANT ARBETSERFARENHET",
+      "items": [
+        {
+          "title": "Landchef",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (extern)",
+          "location": "Belgrad, Serbien",
+          "date": "Januari 2025-"
+        },
+        {
+          "title": "Mobilutvecklare (iOS & Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Belgrad, Serbien",
+          "date": "December 2023 - Januari 2025"
+        },
+        {
+          "title": "Mjukvaruingenjör, extern konsult",
+          "company": "Ledger Lemur",
+          "employer": "Lemur (extern)",
+          "location": "Belgrad, Serbien/Amsterdam, Holland",
+          "date": "Juni 2023-December 2023"
+        },
+        {
+          "title": "Mjukvaruingenjör",
+          "company": "Aer Lingus",
+          "employer": "Endava d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "December 2022-Juni 2023"
+        },
+        {
+          "title": "iOS-utvecklare, UI/UX",
+          "company": "eZdravlje",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016-2022"
+        },
+        {
+          "title": "IT-konsult",
+          "company": "Telekom Srbija CRM",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016-2022"
+        }
+      ]
+    },
+    "relevantEducation": {
+      "title": "RELEVANT UTBILDNING",
+      "items": [
+        {
+          "title": "IT-ingenjör, Fakulteten för informationsteknik",
+          "description": "Jag tog examen från Fakulteten för informationsteknik vid Univerzitet Metropolitan med en examen i IT-teknik."
+        },
+        {
+          "title": "Kungsholmens gymnasium, Stockholm, Sverige",
+          "description": "Gymnasiet"
+        },
+        {
+          "title": "Englebrektsskolan, Stockholm, Sverige",
+          "description": "Grundskolan"
+        }
+      ]
+    },
+    "courses": {
+      "title": "KURSER",
+      "items": [
+        {
+          "title": "Code With Mosh: The Ultimate React Native Series",
+          "description": "En kurs om att bygga React-appar av Mosh Hamedani"
+        },
+        {
+          "title": "Code With Mosh: The Ultimate JS Series",
+          "description": "En fördjupad kurs om JS och dess senaste utvecklingar av Mosh Hamedani"
+        },
+        {
+          "title": "Hacking With Swift: 100 Days of Swift",
+          "description": "En kurs om Apples Swift-språk med deras UIKit- och SwiftUI-ramverk av Paul Hudson"
+        }
+      ]
+    },
+    "references": {
+      "title": "REFERENSER",
+      "items": [
+        "Rade Radumilo från Optimal Systems GmbH",
+        "Nikola Stamatović från Otilio d.o.o."
+      ]
+    },
+    "otherEmployment": {
+      "title": "ÖVRIG ANSTÄLLNING",
+      "items": [
+        {
+          "title": "Frilansmedarbetare",
+          "company": "Cathode TV",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2017-2018"
+        },
+        {
+          "title": "Frilansmedarbetare",
+          "company": "NoQue",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2017-2018"
+        },
+        {
+          "title": "Frilansmedarbetare",
+          "company": "Salt",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016-2017"
+        },
+        {
+          "title": "Moderator, Administratör",
+          "company": "Content Flow Management",
+          "employer": "Steady Health",
+          "location": "Belgrad, Serbien / San Francisco, CA",
+          "date": "2015-2016"
+        },
+        {
+          "title": "Community Manager",
+          "company": "Belgrade Fair Marketing Campaign",
+          "employer": "Juventa Group",
+          "location": "Belgrad, Serbien",
+          "date": "2006"
+        }
+      ]
+    }
+  }
+}

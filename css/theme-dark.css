@@ -1,0 +1,252 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222222 !important;
+        color: #e0e0e0 !important;
+    }
+
+    .cv-container {
+        background-color: #2b2b2b !important;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .header-section {
+        background-color: #333333 !important;
+        border-bottom: 0.1rem solid #555555 !important;
+    }
+
+    .name {
+        color: #e94560 !important;
+    }
+
+    .summary {
+        color: #c0c0c0 !important;
+    }
+
+    /* Profile Image Container and Image in Dark Mode */
+    .profile-image-container {
+        background-color: #3a3a3a !important; /* Darker background for dark mode */
+        border: 3px solid #e94560 !important; /* Adjust border color for dark mode */
+        box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for container scale and shadow */
+    }
+    .profile-image-container:hover {
+        transform: scale(1.08); /* Slightly enlarge the container */
+        box-shadow: 0 0 0 0.8rem rgba(233, 69, 96, 0.3) !important; /* Dark mode hover glow */
+    }
+    .profile-image {
+        border: none !important; /* Removed border from image */
+        transition: transform 0.3s ease; /* Only transform for image */
+    }
+    .profile-image-container:hover .profile-image { /* Apply image transform when container is hovered */
+        transform: scale(1.15) rotate(5deg); /* Enlarge and rotate the image within the scaled container */
+    }
+
+    .contact-links a {
+        background-color: #444444 !important;
+        color: #e0e0e0 !important;
+    }
+
+    .contact-links a:hover {
+        background-color: #555555 !important;
+        color: #e94560 !important;
+    }
+
+    .contact-links a i {
+        color: #e94560 !important;
+    }
+
+    .main-content {
+        background-color: #222222 !important;
+    }
+
+    .left-column {
+        border-right: 0.1rem solid #555555 !important;
+    }
+
+    .section-title {
+        color: #e94560 !important;
+    }
+
+    .bullet-list li {
+        color: #e0e0e0 !important;
+    }
+
+    .bullet-list li::before {
+        color: #e94560 !important;
+    }
+
+    .job-title,
+    .education-degree,
+    .course-title,
+    .other-employment-title {
+        color: #e0e0e0 !important;
+    }
+
+    .employer-school,
+    .course-provider {
+        color: #e0e0e0 !important;
+    }
+
+    .employer-location,
+    .date-range,
+    .course-description {
+        color: #e0e0e0 !important;
+    }
+
+    .job-description,
+    .education-description {
+        color: #e0e0e0 !important;
+    }
+
+    .job-description ul li,
+    .education-description ul li {
+        color: #e0e0e0 !important;
+    }
+
+    .job-description ul li::before,
+    .education-description ul li::before {
+        color: #e94560 !important;
+    }
+
+    #hobbiesText {
+        color: #e0e0e0 !important;
+    }
+
+    .language-selection-buttons .language-button {
+        color: #e0e0e0 !important;
+        background-color: transparent !important;
+    }
+
+    .language-selection-buttons .language-button:hover {
+        color: #e94560 !important;
+        background-color: #444444 !important;
+    }
+
+    .language-selection-buttons .language-button.active {
+        color: #e94560 !important;
+        background-color: transparent !important;
+    }
+
+    .print-button {
+        background-color: #e94560 !important;
+        color: #1a1a2e !important;
+        box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .print-button:hover {
+        background-color: #d83a56 !important;
+        box-shadow: 0 0.6rem 0.8rem rgba(0, 0, 0, 0.3), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Dark mode adjustments for FAB (existing) */
+    .fab-main-button {
+        background-color: #e94560;
+    }
+    .fab-main-button:hover {
+        background-color: #d83a56;
+    }
+    .fab-sub-button {
+        background-color: #444444;
+    }
+    .fab-sub-button:hover {
+        background-color: #555555 !important;
+    }
+    #fabPrintButton {
+        background-color: #e94560;
+    }
+    #fabEditButton {
+        background-color: #9d5bff;
+    }
+    .fab-sub-button::before {
+        background-color: rgba(233, 69, 96, 0.5);
+    }
+
+    /* Dark mode adjustments for edit.html specific elements (moved from edit.css) */
+    .editor-container {
+        background-color: #2b2b2b !important;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4) !important;
+    }
+    .section-header {
+        border-bottom-color: #555555 !important;
+    }
+    .input-group label {
+        color: #c0c0c0 !important;
+    }
+    .input-group input[type="text"],
+    .input-group input[type="url"],
+    .input-group input[type="tel"],
+    .input-group input[type="email"],
+    .input-group textarea {
+        background-color: #333333 !important;
+        border-color: #555555 !important;
+        color: #e0e0e0 !important;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus {
+        border-color: #e94560 !important;
+        box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2) !important;
+    }
+    .btn-primary {
+        background-color: #e94560 !important;
+        color: #1a1a2e !important;
+    }
+    .btn-primary:hover {
+        background-color: #d83a56 !important;
+        box-shadow: 0 0.6rem 0.8rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1) !important;
+    }
+    .btn-secondary {
+        background-color: #444444 !important;
+        color: #e0e0e0 !important;
+    }
+    .btn-secondary:hover {
+        background-color: #555555 !important;
+    }
+    .btn-danger {
+        background-color: #d83a56 !important;
+    }
+    .btn-danger:hover {
+        background-color: #c72c47 !important;
+    }
+    .btn-outline {
+        border-color: #e94560 !important;
+        color: #e94560 !important;
+    }
+    .btn-outline:hover {
+        background-color: #333333 !important;
+    }
+    .dynamic-section-item {
+        background-color: #333333 !important;
+        border-color: #555555 !important;
+    }
+    .message-box.success {
+        background-color: #e94560 !important;
+    }
+    .message-box.error {
+        background-color: #d83a56 !important;
+    }
+
+    /* Dark mode for Language Tabs */
+    .language-tabs {
+        border-bottom-color: #555555 !important;
+    }
+    .language-tab {
+        background-color: #444444 !important;
+        color: #e0e0e0 !important;
+    }
+    .language-tab:hover {
+        background-color: #555555 !important;
+    }
+    .language-tab.active {
+        background-color: #2b2b2b !important;
+        border-color: #555555 !important;
+        border-bottom-color: transparent !important;
+        color: #e94560 !important;
+    }
+    .language-tab .delete-lang-btn {
+        color: #9ca3af !important;
+    }
+    .language-tab .delete-lang-btn:hover {
+        color: #d83a56 !important;
+        background-color: #444444 !important;
+    }
+}

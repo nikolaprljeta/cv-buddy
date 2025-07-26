@@ -1,0 +1,216 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f3f4f6;
+    }
+    .cv-container {
+        background-color: #ffffff;
+        box-shadow: 0 1rem 1.5rem -0.3rem rgba(0, 0, 0, 0.1), 0 0.4rem 0.6rem -0.2rem rgba(0, 0, 0, 0.05);
+    }
+    .header-section {
+        background-color: #f9fafb;
+    }
+    
+    /* Profile Image Container and Image in Light Mode */
+    .profile-image-container {
+        background-color: #f9fafb !important; /* Light background for the container */
+        border: 3px solid #3b82f6 !important; /* Blue border for the container */
+        box-shadow: 0 0.4rem 0.6rem -0.1rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem -0.1rem rgba(0, 0, 0, 0.06) !important;
+    }
+    .profile-image-container:hover {
+        box-shadow: 0 0 0 0.8rem rgba(59, 130, 246, 0.3) !important; /* Blue glow on hover */
+    }
+    .profile-image {
+        border: none !important; /* Removed border from image */
+    }
+    .profile-image:hover {
+        /* No direct hover on image, handled by container:hover .profile-image */
+    }
+
+    .contact-links a {
+        background-color: #e0e7ff;
+        color: #3b82f6;
+    }
+    .contact-links a:hover {
+        background-color: #c3daff;
+        color: #2563eb;
+    }
+    .name {
+        color: #1a202c;
+    }
+    .summary {
+        color: #4a5568;
+    }
+    .section-title {
+        color: #1d4ed8;
+        border-bottom-color: transparent;
+    }
+    .bullet-list li {
+        color: #333333;
+    }
+    .bullet-list li::before {
+        color: #3b82f6;
+    }
+    .job-title,
+    .education-degree,
+    .course-title,
+    .other-employment-title {
+        color: #333333;
+    }
+    .employer-school,
+    .course-provider {
+        color: #333333;
+    }
+    .employer-location,
+    .date-range,
+    .course-description {
+        color: #333333;
+    }
+    .job-description,
+    .education-description {
+        color: #333333;
+    }
+    .job-description ul li,
+    .education-description ul li {
+        color: #333333;
+    }
+    .job-description ul li::before,
+    .education-description ul li::before {
+        color: #3b82f6;
+    }
+    #hobbiesText {
+        color: #333333;
+    }
+    .language-selection-buttons .language-button {
+        color: #333333;
+        background-color: transparent;
+    }
+    .language-selection-buttons .language-button:hover {
+        color: #1d4ed8;
+        background-color: #e0e7ff;
+    }
+    .language-selection-buttons .language-button.active {
+        color: #1d4ed8;
+        background-color: transparent;
+    }
+    .print-button {
+        background-color: #3b82f6;
+        color: #ffffff;
+        box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.06);
+    }
+    .print-button:hover {
+        background-color: #2563eb;
+        box-shadow: 0 0.6rem 0.8rem rgba(0, 0, 0, 0.15), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.08);
+    }
+
+    /* Light mode adjustments for FAB */
+    .fab-main-button {
+        background-color: #3b82f6;
+    }
+    .fab-main-button:hover {
+        background-color: #2563eb;
+    }
+    .fab-sub-button {
+        background-color: #6b7280;
+    }
+    .fab-sub-button:hover {
+        background-color: #4b5563 !important; /* Darker gray for hover */
+    }
+    #fabPrintButton {
+        background-color: #ef4444;
+    }
+    #fabEditButton {
+        background-color: #8b5cf6;
+    }
+    .fab-sub-button::before {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Light mode adjustments for edit.html specific elements (moved from edit.css) */
+    .editor-container {
+        background-color: #ffffff !important;
+        box-shadow: 0 1rem 1.5rem -0.3rem rgba(0, 0, 0, 0.1), 0 0.4rem 0.6rem -0.2rem rgba(0, 0, 0, 0.05) !important;
+    }
+    .section-header {
+        border-bottom-color: #e5e7eb !important;
+    }
+    .input-group label {
+        color: #374151 !important;
+    }
+    .input-group input[type="text"],
+    .input-group input[type="url"],
+    .input-group input[type="tel"],
+    .input-group input[type="email"],
+    .input-group textarea {
+        background-color: #ffffff !important;
+        border-color: #d1d5db !important;
+        color: #4b5563 !important;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+    }
+    .btn-primary {
+        background-color: #3b82f6 !important;
+        color: #ffffff !important;
+    }
+    .btn-primary:hover {
+        background-color: #2563eb !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    .btn-secondary {
+        background-color: #6b7280 !important;
+        color: #ffffff !important;
+    }
+    .btn-secondary:hover {
+        background-color: #4b5563 !important;
+    }
+    .btn-danger {
+        background-color: #ef4444 !important;
+    }
+    .btn-danger:hover {
+        background-color: #dc2626 !important;
+    }
+    .btn-outline {
+        border-color: #3b82f6 !important;
+        color: #3b82f6 !important;
+    }
+    .btn-outline:hover {
+        background-color: #e0e7ff !important;
+    }
+    .dynamic-section-item {
+        background-color: #f9fafb !important;
+        border-color: #e5e7eb !important;
+    }
+    .message-box.success {
+        background-color: #4CAF50 !important;
+    }
+    .message-box.error {
+        background-color: #f44336 !important;
+    }
+
+    /* Light mode for Language Tabs */
+    .language-tabs {
+        border-bottom-color: #d1d5db !important;
+    }
+    .language-tab {
+        background-color: #e5e7eb !important;
+        color: #4b5563 !important;
+    }
+    .language-tab:hover {
+        background-color: #d1d5db !important;
+    }
+    .language-tab.active {
+        background-color: #ffffff !important;
+        border-color: #d1d5db !important;
+        border-bottom-color: transparent !important;
+        color: #3b82f6 !important;
+    }
+    .language-tab .delete-lang-btn {
+        color: #9ca3af !important;
+    }
+    .language-tab .delete-lang-btn:hover {
+        color: #ef4444 !important;
+        background-color: #fecaca !important;
+    }
+}

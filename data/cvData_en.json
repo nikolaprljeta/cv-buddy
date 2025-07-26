@@ -1,0 +1,182 @@
+{
+  "name": "NIKOLA PRLJETA",
+  "summary": "Experienced business analyst and software engineer adept in all stages of advanced app development. Knowledgeable in user interface, testing, and debugging processes. Able to effectively self-manage during independent projects, as well as collaborate in a team setting. Bringing forth expertise in design, installation, testing and maintenance of iPhone and cross platform applications. Equipped with a diverse and ever-expanding skill set.",
+  "contact": [
+    { "label": "Mobile", "url": "tel:+381641948192", "icon": "fa-solid fa-phone" },
+    { "label": "eMail", "url": "mailto:nikola.prljeta@gmail.com", "icon": "fa-solid fa-envelope" },
+    { "label": "Linktree", "url": "http://linktr.ee/nikolaprljeta", "icon": "fa-solid fa-link" },
+    { "label": "LinkedIn", "url": "https://rs.linkedin.com/in/nikola-prljeta-01884231", "icon": "fa-brands fa-linkedin" },
+    { "label": "GitHub", "url": "https://github.com/nikolaprljeta", "icon": "fa-brands fa-github" }
+  ],
+  "sections": {
+    "skills": {
+      "title": "RELEVANT SKILLS",
+      "items": [
+        "Team Player",
+        "Detail-oriented",
+        "Clear and Effective Communicator",
+        "Native and Cross-platform Development"
+      ]
+    },
+    "languages": {
+      "title": "LANGUAGES",
+      "items": [
+        { "label": "English", "code": "en" },
+        { "label": "Swedish", "code": "sv" },
+        { "label": "Serbian", "code": "sr" }
+      ]
+    },
+    "techStack": {
+      "title": "TECH STACK",
+      "items": [
+        "React Native",
+        "iOS Development",
+        "Swift",
+        "UIKit",
+        "SwiftUI",
+        "Cocoa Touch",
+        "Web Development",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "Git",
+        "Java",
+        "Tapestry",
+        "Database Design",
+        "SQL"
+      ]
+    },
+    "hobbies": {
+      "title": "HOBBIES",
+      "text": "Art, culture, music, movies, photography, books, technology, fashion, working out, cycling."
+    },
+    "relevantEmployment": {
+      "title": "RELEVANT EMPLOYMENT",
+      "items": [
+        {
+          "title": "Country Manager",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (external)",
+          "location": "Belgrade, Serbia",
+          "date": "January 2025-"
+        },
+        {
+          "title": "Mobile Developer (iOS & Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Belgrade, Serbia",
+          "date": "December 2023 - January 2025"
+        },
+        {
+          "title": "Software Engineer, External Consultant",
+          "company": "Ledger Lemur",
+          "employer": "Lemur (external)",
+          "location": "Belgrade, Serbia/Amsterdam, Holland",
+          "date": "June 2023-December 2023"
+        },
+        {
+          "title": "Software Engineer",
+          "company": "Aer Lingus",
+          "employer": "Endava d.o.o.",
+          "location": "Belgrade, Serbia",
+          "date": "December 2022-June 2023"
+        },
+        {
+          "title": "iOS Developer, UI/UX",
+          "company": "eZdravlje",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrade, Serbia",
+          "date": "2016-2022"
+        },
+        {
+          "title": "IT Consultant",
+          "company": "Telekom Srbija CRM",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrade, Serbia",
+          "date": "2016-2022"
+        }
+      ]
+    },
+    "relevantEducation": {
+      "title": "RELEVANT EDUCATION",
+      "items": [
+        {
+          "title": "IT Engineer, Faculty of Information Technology",
+          "description": "I graduated from the Faculty of Information Technology at Univerzitet Metropolitan with a degree in IT engineering."
+        },
+        {
+          "title": "Kungsholmens gymnasium, Stockholm, Sweden",
+          "description": "High school"
+        },
+        {
+          "title": "Englebrektsskolan, Stockholm, Sweden",
+          "description": "Grade school"
+        }
+      ]
+    },
+    "courses": {
+      "title": "COURSES",
+      "items": [
+        {
+          "title": "Code With Mosh: The Ultimate React Native Series",
+          "description": "A course on building React apps by Mosh Hamedani"
+        },
+        {
+          "title": "Code With Mosh: The Ultimate JS Series",
+          "description": "An in-depth course on JS and its most recent developments by Mosh Hamedani"
+        },
+        {
+          "title": "Hacking With Swift: 100 Days of Swift",
+          "description": "A course on Apple's Swift language using their UIKit and SwiftUI frameworks by Paul Hudson"
+        }
+      ]
+    },
+    "references": {
+      "title": "REFERENCES",
+      "items": [
+        "Rade Radumilo from Optimal Systems GmbH",
+        "Nikola Stamatović from Otilio d.o.o."
+      ]
+    },
+    "otherEmployment": {
+      "title": "OTHER EMPLOYMENT",
+      "items": [
+        {
+          "title": "Freelance Collaborator",
+          "company": "Cathode TV",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrade, Serbia",
+          "date": "2017-2018"
+        },
+        {
+          "title": "Freelance Collaborator",
+          "company": "NoQue",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrade, Serbia",
+          "date": "2017-2018"
+        },
+        {
+          "title": "Freelance Collaborator",
+          "company": "Salt",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrade, Serbia",
+          "date": "2016-2017"
+        },
+        {
+          "title": "Moderator, Administrator",
+          "company": "Content Flow Management",
+          "employer": "Steady Health",
+          "location": "Belgrade, Serbia / San Francisco, CA",
+          "date": "2015-2016"
+        },
+        {
+          "title": "Community Manager",
+          "company": "Belgrade Fair Marketing Campaign",
+          "employer": "Juventa Group",
+          "location": "Belgrade, Serbia",
+          "date": "2006"
+        }
+      ]
+    }
+  }
+}
