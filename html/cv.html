@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikola Prljeta CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-light.css" media="(prefers-color-scheme: light), all" id="themeStylesheet">
+    <link rel="stylesheet" href="../css/theme-dark.css" media="(prefers-color-scheme: dark)" id="themeDarkStylesheet">
+    <link rel="stylesheet" href="../css/theme-print.css" media="print" id="printThemeStylesheet">
+    <!-- Removed: <link rel="stylesheet" href="../css/theme-pdf.css" media="none" id="pdfThemeStylesheet"> -->
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header-section">
+            <div class="profile-image-container">
+                <img id="profileImage" class="profile-image" src="../assets/profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="header-text-content">
+                <h1 id="cvName" class="name"></h1>
+                <p id="cvSummary" class="summary"></p>
+                <div id="contactLinks" class="contact-links">
+                    </div>
+                <div id="printEmailContact" class="print-only"></div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="leftColumn" class="left-column">
+                </div>
+            <div id="rightColumn" class="right-column">
+                </div>
+        </main>
+    </div>
+
+    <div id="profileImageModal" class="modal-overlay">
+        <div class="modal-content">
+            <img id="enlargedProfileImage" class="enlarged-profile-image" src="" alt="Enlarged Profile Picture">
+        </div>
+    </div>
+
+    <div id="fabContainer" class="fab-container">
+        <div id="fabSubButtons" class="fab-sub-buttons">
+            <button id="fabPrintButton" class="fab-sub-button">
+                .pdf
+            </button>
+            <button id="fabExportTxtButton" class="fab-sub-button">
+                .txt
+            </button>
+            <button id="fabExportMdButton" class="fab-sub-button">
+                .md
+            </button>
+            <button id="fabExportJsonButton" class="fab-sub-button">
+                .json
+            </button>
+            <button id="fabExportHtmlButton" class="fab-sub-button">
+                .html
+            </button>
+        </div>
+        <button id="fabMainButton" class="fab-main-button">
+            <i class="fas fa-arrow-down fab-icon-arrow"></i>
+        </button>
+    </div>
+
+    <div id="messageBox" class="message-box"></div>
+
+    <script src="../js/cv.js"></script>
+</body>
+</html>

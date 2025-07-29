@@ -1,0 +1,327 @@
+/*
+ * theme-print.css - Print-Specific Styles (Designed from Scratch)
+ * This stylesheet is applied ONLY when printing.
+ */
+
+@media print {
+    /* --- Page Margins to remove browser headers/footers and set overall document margins --- */
+    @page {
+        size: A4; /* Explicitly set paper size to A4 */
+        margin: 1.5cm !important; /* Set uniform 1.5cm margin on all sides of the page */
+        marks: none !important; /* Reinforce removal of print marks (browser support varies) */
+        /* The following non-standard properties are commented out but can sometimes help with stubborn browsers */
+        /* @top-left { content: none !important; } */
+        /* @top-center { content: none !important; } */
+        /* @top-right { content: none !important; } */
+        /* @bottom-left { content: none !important; } */
+        /* @bottom-center { content: none !important; } */
+        /* @bottom-right { content: none !important; } */
+    }
+
+    /* --- Global Print Reset and Base Styles --- */
+    html, body {
+        margin: 0 !important; /* Ensure body itself has no default margins */
+        padding: 0 !important; /* Ensure body itself has no default padding */
+        width: auto !important; /* Let content width be determined by container within page margins */
+        min-height: auto !important; /* Let content height be determined by content */
+        height: auto !important; /* Allow content to dictate height */
+        overflow: visible !important; /* Ensure content is not clipped */
+        background-color: #ffffff !important; /* Force white background for print */
+        color: #000000 !important; /* Force black text */
+        -webkit-print-color-adjust: exact !important; /* Ensure colors print as seen */
+        print-color-adjust: exact !important;
+        display: block !important;
+        font-family: 'Merriweather', serif !important; /* Use a serif font for body text */
+        font-size: 10.5pt !important; /* Slightly smaller base font size for more density */
+        line-height: 1.35 !important; /* Tighter overall line height */
+    }
+
+    /* --- Force all main content elements to be visible and reset basic properties --- */
+    .cv-container,
+    .header-section,
+    .main-content,
+    .left-column,
+    .right-column,
+    .section-item,
+    .profile-image-container,
+    .profile-image,
+    .name,
+    .summary,
+    .header-text-content, /* New wrapper for header text */
+    #printEmailContact, /* The email contact div */
+    #printEmailContact p, #printEmailContact a,
+    p, span, div, a, li, h1, h2, h3, h4, h5, h6,
+    .bullet-list,
+    .language-list-item,
+    .entry-item, .entry-item h3, .entry-details, .entry-date, .item-description {
+        display: block !important; /* Force block display */
+        visibility: visible !important; /* Explicitly ensure visibility */
+        opacity: 1 !important; /* Ensure no opacity issues */
+        height: auto !important; /* Allow content to dictate height */
+        width: auto !important; /* Allow content to dictate width */
+        margin: 0 !important; /* Reset margins aggressively */
+        padding: 0 !important; /* Reset paddings aggressively */
+        border: none !important; /* REMOVED ALL BORDERS BY DEFAULT */
+        box-shadow: none !important; /* Remove shadows */
+        background: none !important; /* Remove background colors */
+        color: #000000 !important; /* Ensure text is black */
+        float: none !important; /* Remove floats */
+        position: static !important; /* Remove absolute/relative positioning */
+        transform: none !important; /* Remove transforms */
+        flex: none !important; /* Remove flex properties */
+        page-break-after: auto !important; /* Allow page breaks */
+        page-break-before: auto !important;
+        page-break-inside: auto !important;
+        white-space: normal !important; /* Ensure text wrapping */
+        word-wrap: break-word !important; /* Ensure long words break */
+    }
+
+    /* --- Hiding Elements Not Needed for Print --- */
+    .fab-container,
+    .modal-overlay,
+    .contact-links, /* The web-based contact buttons */
+    .language-links-list li.language-list-item.active, /* Hide active language emphasis if any */
+    button, input, textarea,
+    #messageBox { /* ADDED: Hide the message box */
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide all links by default, except those explicitly for print */
+    a:not(#printEmailContact a) {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+
+    /* --- CV Container Layout - MODIFIED FOR UNIFORM MARGINS --- */
+    .cv-container {
+        max-width: 18cm !important; /* Max-width for content within the page margins */
+        margin: 0 auto !important; /* Center content horizontally within the page margins */
+        padding: 0 !important; /* Ensure no extra padding */
+    }
+
+    /* --- Header Section Layout - ENSURED NO BORDER-BOTTOM --- */
+    .header-section {
+        display: flex !important;
+        flex-direction: row !important; /* Image and text side-by-side */
+        align-items: flex-start !important; /* Align content to the top */
+        gap: 1cm !important; /* Space between image and text */
+        margin-bottom: 0.8cm !important;
+        padding-bottom: 0.8cm !important;
+        border-bottom: none !important; /* Explicitly removed */
+        page-break-after: avoid !important; /* Avoid page break directly after header */
+    }
+
+    .profile-image-container {
+        width: 3.5cm !important; /* Force square */
+        height: 3.5cm !important; /* Force square */
+        border: 1pt solid #ccc !important;
+        border-radius: 0.5cm !important; /* Rounded corners */
+        overflow: hidden !important; /* Clip content outside border-radius */
+        flex-shrink: 0 !important; /* Prevent shrinking */
+        margin-right: 0.5cm !important; /* Additional space to the right of image */
+    }
+    .profile-image {
+        width: 100% !important; /* Fill container */
+        height: 100% !important; /* Fill container */
+        object-fit: cover !important; /* Crop to fit, maintain aspect ratio */
+        border-radius: 0.5cm !important; /* Apply rounded corners to the image itself */
+    }
+
+    .header-text-content {
+        flex-grow: 1 !important; /* Allow text content to take remaining space */
+        text-align: left !important; /* Align text to the left within its container */
+    }
+
+    .name {
+        font-size: 20pt !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        margin-bottom: 0.2cm !important;
+        line-height: 1.1 !important;
+        text-transform: uppercase !important;
+    }
+    .summary {
+        font-size: 9.5pt !important;
+        line-height: 1.4 !important;
+        text-align: left !important; /* Ensure left alignment */
+        margin-bottom: 0.3cm !important;
+        color: #333333 !important;
+    }
+
+    /* Print-only email contact styling - AGGRESSIVELY FORCE INLINE DISPLAY */
+    #printEmailContact {
+        display: inline !important; /* Force inline display for the div itself */
+        visibility: visible !important;
+        margin-top: 0.2cm !important;
+        /* Ensure no extra line breaks */
+        white-space: nowrap !important; /* Keep content on one line */
+    }
+    #printEmailContact p {
+        /* If a p tag is still used, force it inline too, though JS now avoids it */
+        display: inline !important;
+        margin-bottom: 0 !important;
+        color: #333333 !important;
+        font-size: 9.5pt !important; /* Ensure font size is applied */
+    }
+    #printEmailContact a {
+        display: inline !important; /* Force inline display for the link */
+        color: #0000EE !important; /* Standard link blue */
+        text-decoration: underline !important;
+        font-size: 9.5pt !important; /* Ensure font size is applied */
+    }
+
+
+    /* --- Main Content Columns - AGGRESSIVELY FIXED WIDTHS WITH CSS GRID & DIVIDER --- */
+    .main-content {
+        display: grid !important; /* Use CSS Grid */
+        /* Explicitly define column widths in cm */
+        /* Total width is 18cm (from cv-container). Left 1/3, Right 2/3 of this. */
+        grid-template-columns: 6cm 12cm !important; /* Left 1/3 (6cm), Right 2/3 (12cm) of 18cm */
+        grid-column-gap: 1cm !important; /* Space between columns */
+        position: relative !important; /* For positioning the divider pseudo-element */
+        width: 100% !important; /* Take full width of parent (cv-container) */
+        height: auto !important;
+    }
+
+    /* Vertical Divider Line */
+    .main-content::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: calc(6cm + 0.5cm) !important; /* Left column width + half of gap */
+        width: 1pt !important; /* Thin line */
+        background-color: #aaaaaa !important; /* Color of the line */
+        z-index: 1 !important; /* Ensure it's above content if needed, but below text */
+    }
+
+    .left-column, .right-column {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-shrink: 0 !important;
+        padding: 0 !important; /* Reset any lingering padding */
+    }
+
+
+    /* --- Section Styling - REMOVED BORDER-BOTTOM --- */
+    .section-title {
+        font-family: 'Inter', sans-serif !important; /* Use sans-serif for titles */
+        font-size: 13pt !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        text-transform: uppercase !important;
+        margin-top: 0.5cm !important; /* Reverted margin-top for sections */
+        margin-bottom: 0.35cm !important;
+        page-break-after: avoid !important;
+        border-bottom: none !important; /* AGGRESSIVELY REMOVED */
+        padding-bottom: 0.1cm !important;
+    }
+
+    /* Removed specific top margin rules for first section/entry on new pages */
+
+
+    /* List items (skills, languages, etc.) */
+    .bullet-list {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important; /* Remove default padding */
+    }
+
+    .language-list-item { /* Applies to skills, languages, tech stack, references */
+        font-size: 9.5pt !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.1cm !important;
+        position: relative !important;
+        padding-left: 0.8em !important; /* Space for the bullet */
+        text-indent: -0.8em !important; /* Pull text back for hanging indent */
+        color: #333333 !important;
+    }
+
+    .language-list-item::before {
+        content: "•\00A0" !important; /* Bullet character + non-breaking space */
+        color: #555555 !important; /* Slightly lighter bullet color */
+        font-size: 1em !important;
+        line-height: 1 !important;
+        top: 0.2em !important; /* Adjusted for better vertical alignment */
+    }
+
+    /* Unified Entry Styling (Employment, Education, Courses, Other Employment) - AGGRESSIVELY REMOVED BORDER-BOTTOM */
+    .entry-item {
+        margin-bottom: 0.4cm !important;
+        padding-bottom: 0.4cm !important;
+        border-bottom: none !important; /* AGGRESSIVELY REMOVED */
+        page-break-inside: avoid !important;
+    }
+
+    .entry-item:last-child {
+        border-bottom: none !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .entry-item h3 {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 11.5pt !important;
+        font-weight: 600 !important;
+        color: #000000 !important;
+        margin-bottom: 0.15cm !important;
+        line-height: 1.15 !important;
+        page-break-after: avoid !important;
+    }
+
+    .entry-details, .entry-date {
+        font-size: 8.5pt !important;
+        color: #555555 !important;
+        font-style: italic !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0 !important; /* Reset margin for these paragraphs */
+    }
+    .entry-details {
+        margin-bottom: 0.05cm !important; /* Small space between details and date */
+    }
+    .entry-date {
+        margin-bottom: 0.25cm !important; /* Space after date before description */
+    }
+
+    .item-description {
+        font-size: 8.5pt !important;
+        line-height: 1.4 !important;
+        margin-top: 0.15cm !important; /* Space above description */
+        color: #333333 !important;
+    }
+
+    /* Bullet lists within entry descriptions */
+    .entry-item .bullet-list {
+        margin-left: 0.5cm !important; /* Indent bullet points within descriptions */
+        margin-top: 0.15cm !important;
+    }
+    .entry-item .bullet-list li {
+        font-size: 8.5pt !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.05cm !important;
+        position: relative !important;
+        padding-left: 0.8em !important;
+        text-indent: -0.8em !important;
+    }
+    .entry-item .bullet-list li::before {
+        content: "•\00A0" !important;
+        color: #555555 !important;
+        font-size: 1em !important;
+        line-height: 1 !important;
+        top: 0.2em !important;
+    }
+
+    /* Hobbies section */
+    .hobbies-section p {
+        font-size: 9.5pt !important;
+        line-height: 1.5 !important;
+        margin-top: 0.2cm !important;
+        color: #333333 !important;
+    }
+}

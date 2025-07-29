@@ -1,0 +1,242 @@
+{
+  "name": "NIKOLA PRLJETA",
+  "summary": "Erfaren affärsanalytiker och mjukvaruingenjör med kompetens i alla steg av avancerad apputveckling. Kunnig inom användargränssnitt, testning och felsökningsprocesser.\n\nKan effektivt hantera självständiga projekt, samt samarbeta i en teammiljö.\n\nMedför expertis inom design, installation, testning och underhåll av iPhone- och plattformsoberoende applikationer.\n\nUtrustad med en mångsidig och ständigt växande kompetens.",
+  "contact": [
+    {
+      "label": "e-post",
+      "url": "mailto:nikola.prljeta@gmail.com",
+      "icon": "fa-solid fa-envelope"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/nikola-prljeta-01884231/?originalSubdomain=rs",
+      "icon": "fa-brands fa-linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/nikolaprljeta",
+      "icon": "fa-brands fa-github"
+    }
+  ],
+  "sections": [
+    {
+      "type": "languages",
+      "column": "left",
+      "title": "SPRÅK",
+      "current": {
+        "language": "Svenska",
+        "proficiency": ""
+      }
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "RELEVANTA FÄRDIGHETER",
+      "items": [
+        "Lagspelare",
+        "Detaljorienterad",
+        "Tydlig och effektiv kommunikatör",
+        "Inhemsk och plattformsoberoende utveckling"
+      ]
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "TEKNISK STACK",
+      "items": [
+        "React Native",
+        "React",
+        "Swift",
+        "UIKit",
+        "SwiftUI",
+        "Cocoa Touch",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "Node.js",
+        "Git",
+        "Java",
+        "Tapestry",
+        "Databaser",
+        "SQL"
+      ]
+    },
+    {
+      "type": "text",
+      "column": "left",
+      "title": "HOBBIES",
+      "text": "Konst, kultur, musik, filmer, fotografi, böcker, teknik, mode, träning, cykling."
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "RELEVANT ARBETSERFARENHET",
+      "items": [
+        {
+          "title": "Landchef",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (extern)",
+          "location": "Belgrad, Serbien",
+          "date": "Januari 2025-",
+          "description": []
+        },
+        {
+          "title": "Mobilutvecklare (iOS & Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Belgrad, Serbien",
+          "date": "December 2023 - Januari 2025",
+          "description": []
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "ÖVRIG ARBETSERFARENHET",
+      "items": [
+        {
+          "title": "Mjukvaruingenjör, extern konsult",
+          "company": "Ledger Lemur",
+          "employer": "Lemur (extern)",
+          "location": "Belgrad, Serbien/Amsterdam, Holland",
+          "date": "Juni 2023-December 2023",
+          "description": []
+        },
+        {
+          "title": "Mjukvaruingenjör",
+          "company": "Aer Lingus",
+          "employer": "Endava d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "December 2022-Juni 2023",
+          "description": []
+        },
+        {
+          "title": "iOS-utvecklare, UI/UX",
+          "company": "eZdravlje",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016-2022",
+          "description": []
+        },
+        {
+          "title": "IT-konsult",
+          "company": "Telekom Srbija CRM",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016-2022",
+          "description": []
+        },
+        {
+          "title": "Frilansmedarbetare",
+          "company": "Cathode TV",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2017-2018",
+          "description": []
+        },
+        {
+          "title": "Frilansmedarbetare",
+          "company": "NoQue",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2017-2018",
+          "description": []
+        },
+        {
+          "title": "Frilansmedarbetare",
+          "company": "Salt",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016-2017",
+          "description": []
+        },
+        {
+          "title": "Moderator, Administratör",
+          "company": "Content Flow Management",
+          "employer": "Steady Health",
+          "location": "Belgrad, Serbien / San Francisco, CA",
+          "date": "2015-2016",
+          "description": []
+        },
+        {
+          "title": "Community Manager",
+          "company": "Belgrade Fair Marketing Campaign",
+          "employer": "Juventa Group",
+          "location": "Belgrad, Serbien",
+          "date": "2006",
+          "description": []
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "RELEVANT UTBILDNING",
+      "items": [
+        {
+          "title": "IT-ingenjör, Fakulteten för informationsteknik",
+          "description": "Jag tog examen från Fakulteten för informationsteknik vid Univerzitet Metropolitan med en examen i IT-ingenjör."
+        },
+        {
+          "title": "Gymnasieskola",
+          "institution": "Kungsholmens gymnasium",
+          "location": "Stockholm, Sverige",
+          "description": ""
+        },
+        {
+          "title": "Grundskola",
+          "institution": "Englebrektsskolan",
+          "location": "Stockholm, Sverige",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "KURSER",
+      "items": [
+        {
+          "title": "The Ultimate React Native Series",
+          "institution": "Mosh Hamedani",
+          "date": "N/A",
+          "description": "Allt du behöver för att bygga och distribuera professionella appar med React Native"
+        },
+        {
+          "title": "React 18: React + TypeScript",
+          "institution": "Mosh Hamedani",
+          "date": "N/A",
+          "description": "En steg-för-steg-guide för att bygga webbappar med React 18+ och TypeScript"
+        },
+        {
+          "title": "Code With Mosh: The Ultimate JS Series",
+          "institution": "Mosh Hamedani",
+          "date": "N/A",
+          "description": "En djupgående kurs om JS och dess senaste utveckling av Mosh Hamedani"
+        },
+        {
+          "title": "Hacking With Swift: 100 Days of Swift",
+          "institution": "Paul Hudson",
+          "date": "N/A",
+          "description": "En kurs om Apples Swift-språk med deras UIKit- och SwiftUI-ramverk av Paul Hudson"
+        },
+        {
+          "title": "iOS & Swift - The Complete iOS App Development Bootcamp",
+          "institution": "Dr. Angela Yu",
+          "date": "N/A",
+          "description": "Från nybörjare till iOS-apputvecklare med bara en kurs! Fullt uppdaterad med en omfattande modul dedikerad till SwiftUI"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "column": "right",
+      "title": "REFERENSER",
+      "items": [
+        "Rade Radumilo från Optimal Systems GmbH",
+        "Nikola Stamatović från Otilio d.o.o."
+      ]
+    }
+  ]
+}

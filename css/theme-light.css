@@ -1,0 +1,158 @@
+/*
+ * theme-light.css - Light Mode Specific Styles
+ * This stylesheet is applied when light mode is active.
+ */
+
+body {
+    background-color: #f0f2f5 !important; /* Light background */
+    color: #333333 !important; /* Dark text for general content */
+}
+
+.cv-container {
+    background-color: #ffffff !important; /* White background for container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+}
+
+/* Header Section */
+.header-section {
+    border-bottom: 1px solid #e0e0e0 !important; /* Light border */
+}
+
+.name {
+    color: #000000 !important; /* Black for name */
+}
+
+.summary {
+    color: #555555 !important; /* Medium grey for summary */
+}
+
+/* Contact Links */
+.contact-link {
+    background-color: #e9ecef !important; /* Light button background */
+    color: #495057 !important; /* Dark icon/text */
+    border: 1px solid #ced4da !important; /* Light border */
+}
+
+.contact-link:hover {
+    background-color: #dee2e6 !important; /* Slightly darker on hover */
+    color: #212529 !important;
+}
+
+/* Main Content Sections */
+.section-title {
+    color: #000000 !important; /* Black for section titles */
+    border-bottom: 1px solid #e0e0e0 !important; /* Light border */
+}
+
+/* List Items (Skills, Languages, Tech Stack, References) */
+.language-list-item {
+    color: #333333 !important; /* Dark text */
+}
+
+.language-list-item::before {
+    color: #666666 !important; /* Slightly muted dark bullet */
+}
+
+/* Active language link (if applicable) */
+.language-list-item.active {
+    color: #007bff !important; /* A distinct blue for active language */
+    font-weight: bold !important;
+}
+
+/* Entry Items (Employment, Education, Courses, Other Employment) */
+.entry-item {
+    border-bottom: 0.5px dashed #f0f0f0 !important; /* Very light dashed border */
+}
+
+.entry-item:last-child {
+    border-bottom: none !important;
+}
+
+.entry-item h3 {
+    color: #000000 !important; /* Black for entry titles */
+}
+
+.entry-details,
+.entry-date {
+    color: #555555 !important; /* Medium grey for details/date */
+}
+
+.item-description {
+    color: #333333 !important; /* Dark text for descriptions */
+}
+
+/* Hobbies section */
+.hobbies-section p {
+    color: #333333 !important; /* Dark text */
+}
+
+/* FAB (Floating Action Button) */
+.fab-container {
+    background-color: transparent !important; /* Make container background transparent */
+    box-shadow: none !important; /* Remove shadow from container */
+}
+
+.fab-main-button {
+    background-color: #007bff !important; /* Blue for the main FAB button */
+    color: #ffffff !important; /* White icon/text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important; /* Keep a subtle shadow */
+    border: none !important; /* Ensure no border */
+}
+
+.fab-main-button:hover {
+    background-color: #0056b3 !important; /* Darker blue on hover */
+}
+
+.fab-sub-button {
+    background-color: #007bff !important; /* Blue for sub buttons */
+    color: #ffffff !important;
+}
+
+.fab-sub-button:hover {
+    background-color: #0056b3 !important; /* Darker blue on hover */
+}
+
+/* Message Box */
+.message-box {
+    background-color: #ffffff !important; /* White message box background */
+    color: #333333 !important;
+    border: 1px solid #ced4da !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.message-box.info {
+    background-color: #ffffff !important;
+    border-color: #007bff !important; /* Blue border for info */
+    color: #007bff !important;
+}
+
+.message-box.success {
+    background-color: #d4edda !important; /* Light green for success */
+    border-color: #28a745 !important;
+    color: #155724 !important;
+}
+
+.message-box.error {
+    background-color: #f8d7da !important; /* Light red for error */
+    border-color: #dc3545 !important;
+    color: #721c24 !important;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent dark overlay */
+}
+
+.modal-content {
+    background-color: #ffffff !important; /* White modal content */
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.modal-close-button {
+    color: #333333 !important; /* Dark close button */
+}
+
+.modal-close-button:hover {
+    color: #000000 !important;
+}
