@@ -1,3 +1,16 @@
+.language-list-print {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: 1em !important;
+    margin: 0 0 1em 0 !important;
+    color: #222 !important;
+}
+/* Prevent awkward wrapping for language list items in print */
+.language-links-list .language-list-item,
+.language-links-list .language-list-item {
+    white-space: normal !important;
+    word-break: break-word !important;
+}
 /*
  * theme-print.css - Print-Specific Styles (Designed from Scratch)
  * This stylesheet is applied ONLY when printing.

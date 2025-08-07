@@ -24,7 +24,16 @@ function createSectionElement(section) {
         section.items.forEach(item => {
             const li = document.createElement('li');
             li.className = 'language-list-item';
-            li.textContent = item;
+            if (item && typeof item === 'object' && (item.url || item.link)) {
+                li.classList.add('list-link');
+                const a = document.createElement('a');
+                a.href = item.url || item.link;
+                a.textContent = item.label || item.text || item.name || item.title || item.url || item.link;
+                a.target = '_blank';
+                li.appendChild(a);
+            } else {
+                li.textContent = typeof item === 'string' ? item : String(item);
+            }
             ul.appendChild(li);
         });
         sectionDiv.appendChild(ul);
@@ -32,6 +41,23 @@ function createSectionElement(section) {
         const ul = document.createElement('ul');
         ul.className = 'bullet-list language-links-list';
         ul.id = 'dynamicLanguageDisplayList';
+        if (section.items && Array.isArray(section.items)) {
+            section.items.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'language-list-item';
+                if (item && typeof item === 'object' && (item.url || item.link)) {
+                    li.classList.add('list-link');
+                    const a = document.createElement('a');
+                    a.href = item.url || item.link;
+                    a.textContent = item.label || item.text || item.name || item.title || item.url || item.link;
+                    a.target = '_blank';
+                    li.appendChild(a);
+                } else {
+                    li.textContent = typeof item === 'string' ? item : String(item);
+                }
+                ul.appendChild(li);
+            });
+        }
         sectionDiv.appendChild(ul);
     } else if (section.type === 'entries') {
         section.items.forEach(item => {

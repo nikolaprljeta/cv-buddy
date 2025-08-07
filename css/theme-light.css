@@ -1,3 +1,58 @@
+/* Bullet for language list items */
+.language-list-item::before {
+    content: "•\00A0";
+    color: #555555;
+    font-size: 1em;
+    line-height: 1;
+    margin-right: 0.2em;
+    transition: color 0.2s;
+}
+
+/* Only clickable list items get blue bullet */
+.language-list-item.list-link::before {
+    color: #007bff;
+}
+.language-list-item.list-link:hover::before {
+    color: #0056b3;
+}
+.language-list-item:hover {
+    color: #333333 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/* Only real links inside list items get link styles */
+.language-list-item {
+    color: #333333 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+    position: relative;
+}
+
+.language-list-item::before {
+    content: "\2022"; /* bullet */
+    color: #555555;
+    font-size: 1em;
+    position: absolute;
+    left: -1.2em;
+    top: 0.1em;
+    transition: color 0.2s;
+}
+.language-list-item.list-link::before {
+    color: #007bff;
+}
+.language-list-item.list-link:hover::before {
+    color: #0056b3;
+}
+}
+.language-list-item.list-link {
+    color: #007bff !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+}
+.language-list-item.list-link:hover {
+    color: #0056b3 !important;
+    text-decoration: underline !important;
+}
 /*
  * theme-light.css - Light Mode Specific Styles
  * This stylesheet is applied when light mode is active.

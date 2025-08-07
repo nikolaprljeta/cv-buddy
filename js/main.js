@@ -26,21 +26,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (fabExportHtmlButton) {
         fabExportHtmlButton.addEventListener('click', function() {
             try {
-                if (cvData && typeof cvData === 'object') {
+                if (cvData && typeof cvData === 'object' && Array.isArray(cvData.sections)) {
                     const csvRows = [];
-                    for (const section in cvData) {
-                        if (Array.isArray(cvData[section])) {
-                            cvData[section].forEach(item => {
-                                const row = Object.values(item).map(val => `"${String(val).replace(/"/g, '""')}"`).join(',');
-                                csvRows.push(row);
+                    // Add headers for each section type
+                    cvData.sections.forEach(section => {
+                        if (section.type === 'list') {
+                            csvRows.push(`"${section.title}","Item"`);
+                            section.items.forEach(item => {
+                                csvRows.push(`"${section.title}","${item}"`);
                             });
-                        } else if (typeof cvData[section] === 'object') {
-                            const row = Object.values(cvData[section]).map(val => `"${String(val).replace(/"/g, '""')}"`).join(',');
-                            csvRows.push(row);
-                        } else {
-                            csvRows.push(`"${section}","${String(cvData[section]).replace(/"/g, '""')}"`);
+                        } else if (section.type === 'entries') {
+                            // Find all keys used in items
+                            const keys = section.items.length > 0 ? Object.keys(section.items[0]) : [];
+                            csvRows.push(`"${section.title}",${keys.map(k => `"${k}"`).join(',')}`);
+                            section.items.forEach(item => {
+                                csvRows.push(`"${section.title}",${keys.map(k => `"${String(item[k]).replace(/"/g, '""')}"`).join(',')}`);
+                            });
+                        } else if (section.type === 'text') {
+                            csvRows.push(`"${section.title}","${section.text}"`);
                         }
-                    }
+                    });
+                    // Add name and summary at the top
+                    csvRows.unshift(`"Name","${cvData.name}"`);
+                    csvRows.unshift(`"Summary","${cvData.summary.replace(/\n/g, ' ')}"`);
                     const csvContent = csvRows.join('\n');
                     const blob = new Blob([csvContent], { type: 'text/csv' });
                     const link = document.createElement('a');
@@ -63,21 +71,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (fabExportTxtButton) {
         fabExportTxtButton.addEventListener('click', function() {
             try {
-                if (cvData && typeof cvData === 'object') {
+                if (cvData && typeof cvData === 'object' && Array.isArray(cvData.sections)) {
                     let txtContent = '';
-                    for (const section in cvData) {
-                        txtContent += section + '\n';
-                        if (Array.isArray(cvData[section])) {
-                            cvData[section].forEach(item => {
-                                txtContent += Object.values(item).join(', ') + '\n';
+                    txtContent += `Name: ${cvData.name}\n`;
+                    txtContent += `Summary: ${cvData.summary.replace(/\n/g, ' ')}\n\n`;
+                    cvData.sections.forEach(section => {
+                        txtContent += section.title + '\n';
+                        if (section.type === 'list') {
+                            section.items.forEach(item => {
+                                txtContent += `- ${item}\n`;
                             });
-                        } else if (typeof cvData[section] === 'object') {
-                            txtContent += Object.values(cvData[section]).join(', ') + '\n';
-                        } else {
-                            txtContent += String(cvData[section]) + '\n';
+                        } else if (section.type === 'entries') {
+                            section.items.forEach(item => {
+                                let entryLine = '';
+                                Object.keys(item).forEach(key => {
+                                    if (item[key]) {
+                                        entryLine += `${key}: ${item[key]} | `;
+                                    }
+                                });
+                                txtContent += entryLine.replace(/ \| $/, '') + '\n';
+                            });
+                        } else if (section.type === 'text') {
+                            txtContent += section.text + '\n';
                         }
                         txtContent += '\n';
-                    }
+                    });
                     const blob = new Blob([txtContent], { type: 'text/plain' });
                     const link = document.createElement('a');
                     link.href = URL.createObjectURL(blob);
