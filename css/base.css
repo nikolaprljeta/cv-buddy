@@ -1,3 +1,49 @@
+/* Unified List Styling for all lists */
+.bullet-list, .language-links-list, .custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bullet-list li, .language-links-list li, .custom-list li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.bullet-list li::before, .language-links-list li::before, .custom-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    top: 0;
+}
+
+/* List item base style: not clickable by default */
+.list-item {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+    transition: color 0.2s;
+}
+
+/* List items with links: blue, underlined, clickable, hover effect */
+.list-link {
+    color: #0074d9;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.list-link:hover,
+.list-link:focus {
+    color: #005fa3;
+    text-decoration: underline;
+}
+.selected-language {
+    text-decoration: underline;
+    font-weight: bold;
+}
 /* base.css - Core CSS Reset and Fundamental Layout */
 
 /* CSS Reset */

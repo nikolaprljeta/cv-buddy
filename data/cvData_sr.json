@@ -20,15 +20,6 @@
   ],
   "sections": [
     {
-      "type": "languages",
-      "column": "left",
-      "title": "JEZICI",
-      "current": {
-        "language": "Srpski",
-        "proficiency": ""
-      }
-    },
-    {
       "type": "list",
       "column": "left",
       "title": "RELEVANTNE VEŠTINE",
@@ -62,33 +53,10 @@
       ]
     },
     {
-      "type": "text",
+      "type": "list",
       "column": "left",
-      "title": "HOBIJ",
-      "text": "Umetnost, kultura, muzika, filmovi, fotografija, knjige, tehnologija, moda, vežbanje, biciklizam."
-    },
-    {
-      "type": "entries",
-      "column": "right",
-      "title": "RELEVANTNA ISTORIJA ZAPOŠLJAVANJA",
-      "items": [
-        {
-          "title": "Menadžer države",
-          "company": "Mingtian AB",
-          "employer": "Mingtian AB (eksterni)",
-          "location": "Beograd, Srbija",
-          "date": "Januar 2025-",
-          "description": []
-        },
-        {
-          "title": "Mobilni programer (iOS & Android)",
-          "company": "Skillogs",
-          "employer": "Skunkworks Den",
-          "location": "Beograd, Srbija",
-          "date": "Decembar 2023 - Januar 2025",
-          "description": []
-        }
-      ]
+      "title": "LANGUAGES",
+      "languageName": "Serbian"
     },
     {
       "type": "entries",
