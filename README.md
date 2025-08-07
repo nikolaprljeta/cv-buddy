@@ -11,6 +11,4 @@ A simple HTML/CSS/JS web app for displaying your CV.
 5.  Set up GitHub Pages by pushing to the `main` branch and enabling Pages in your repository settings (select the `main` branch as the source and the `/` root folder)
 
 ## I mean
-- [ ] Refactor JS
-- [ ] Fix FOB
 - [ ] Fix print theme

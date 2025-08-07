@@ -1,6 +1,5 @@
 /* style.css - General Styling (Non-Color, Non-Reset) */
 
-/* General body styles for cv.html - Centering the main content */
 body {
     padding: 2rem; /* Add some padding around the main CV container */
     align-items: center; /* Center vertically */

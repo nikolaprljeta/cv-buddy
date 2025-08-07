@@ -1,4 +1,3 @@
-// filepath: /cv-buddy/cv-buddy/js/modal.js
 const profileImage = document.getElementById('profileImage');
 const profileImageModal = document.getElementById('profileImageModal');
 const enlargedProfileImage = document.getElementById('enlargedProfileImage');

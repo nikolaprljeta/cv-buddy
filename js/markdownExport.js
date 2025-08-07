@@ -1,4 +1,4 @@
-function convertCvToMarkdown(data) {
+function convertCvToMarkdown(data, availableLangs = [], languageNamesMap = {}) {
     let markdown = `# ${data.name}\n\n`;
     markdown += `## Summary\n\n${data.summary}\n\n`;
 
@@ -19,7 +19,7 @@ function convertCvToMarkdown(data) {
         if (section.type === 'list' || section.type === 'entries') {
             hasContent = section.items && section.items.length > 0;
         } else if (section.type === 'languages') {
-            hasContent = availableLangs.length > 0;
+            hasContent = availableLangs && availableLangs.length > 0;
         } else if (section.type === 'text') {
             hasContent = section.text;
         }
@@ -34,11 +34,13 @@ function convertCvToMarkdown(data) {
             });
             markdown += `\n`;
         } else if (section.type === 'languages') {
-            availableLangs.forEach(langCode => {
-                let displayText = languageNamesMap[langCode] || langCode.toUpperCase();
-                markdown += `- ${displayText}\n`;
-            });
-            markdown += `\n`;
+            if (availableLangs && availableLangs.length > 0) {
+                availableLangs.forEach(langCode => {
+                    let displayText = languageNamesMap[langCode] || langCode.toUpperCase();
+                    markdown += `- ${displayText}\n`;
+                });
+                markdown += `\n`;
+            }
         } else if (section.type === 'entries') {
             section.items.forEach(item => {
                 markdown += `#### ${item.title}\n`;

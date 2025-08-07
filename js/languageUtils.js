@@ -1,4 +1,3 @@
-// filepath: /cv-buddy/cv-buddy/js/languageUtils.js
 function getLanguageDisplayName(langCode) {
     switch (langCode) {
         case 'en': return 'English';

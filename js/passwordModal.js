@@ -1,4 +1,3 @@
-// This file manages the password modal functionality, exporting functions showPasswordModal and hidePasswordModal to control the visibility of the password input modal.
 
 const passwordModal = document.getElementById('passwordModal');
 const passwordInput = document.getElementById('passwordInput');

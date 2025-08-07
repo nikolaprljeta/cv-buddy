@@ -6,7 +6,7 @@ function createSectionElement(section) {
     if (section.type === 'list' || section.type === 'entries') {
         hasContent = section.items && section.items.length > 0;
     } else if (section.type === 'languages') {
-        hasContent = true; // Always render if present
+        hasContent = true;
     } else if (section.type === 'text') {
         hasContent = section.text;
     }

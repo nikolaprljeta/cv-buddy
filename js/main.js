@@ -20,6 +20,104 @@ document.addEventListener('DOMContentLoaded', function() {
     const fabPrintButton = document.getElementById('fabPrintButton');
     const fabExportMdButton = document.getElementById('fabExportMdButton');
     const fabExportEncryptedMdButton = document.getElementById('fabExportEncryptedMdButton');
+    const fabExportTxtButton = document.getElementById('fabExportTxtButton');
+    const fabExportJsonButton = document.getElementById('fabExportJsonButton');
+    const fabExportHtmlButton = document.getElementById('fabExportHtmlButton');
+    if (fabExportHtmlButton) {
+        fabExportHtmlButton.addEventListener('click', function() {
+            try {
+                if (cvData && typeof cvData === 'object') {
+                    const csvRows = [];
+                    for (const section in cvData) {
+                        if (Array.isArray(cvData[section])) {
+                            cvData[section].forEach(item => {
+                                const row = Object.values(item).map(val => `"${String(val).replace(/"/g, '""')}"`).join(',');
+                                csvRows.push(row);
+                            });
+                        } else if (typeof cvData[section] === 'object') {
+                            const row = Object.values(cvData[section]).map(val => `"${String(val).replace(/"/g, '""')}"`).join(',');
+                            csvRows.push(row);
+                        } else {
+                            csvRows.push(`"${section}","${String(cvData[section]).replace(/"/g, '""')}"`);
+                        }
+                    }
+                    const csvContent = csvRows.join('\n');
+                    const blob = new Blob([csvContent], { type: 'text/csv' });
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = 'nikola-prljeta-cv.csv';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    showMessage('CV data is not available for CSV export.', 'error');
+                }
+            } catch (err) {
+                console.error('CSV export failed:', err);
+                showMessage('CSV export failed.', 'error');
+            }
+            toggleFab();
+        });
+    }
+
+    if (fabExportTxtButton) {
+        fabExportTxtButton.addEventListener('click', function() {
+            try {
+                if (cvData && typeof cvData === 'object') {
+                    let txtContent = '';
+                    for (const section in cvData) {
+                        txtContent += section + '\n';
+                        if (Array.isArray(cvData[section])) {
+                            cvData[section].forEach(item => {
+                                txtContent += Object.values(item).join(', ') + '\n';
+                            });
+                        } else if (typeof cvData[section] === 'object') {
+                            txtContent += Object.values(cvData[section]).join(', ') + '\n';
+                        } else {
+                            txtContent += String(cvData[section]) + '\n';
+                        }
+                        txtContent += '\n';
+                    }
+                    const blob = new Blob([txtContent], { type: 'text/plain' });
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = 'nikola-prljeta-cv.txt';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    showMessage('CV data is not available for TXT export.', 'error');
+                }
+            } catch (err) {
+                console.error('TXT export failed:', err);
+                showMessage('TXT export failed.', 'error');
+            }
+            toggleFab();
+        });
+    }
+
+    if (fabExportJsonButton) {
+        fabExportJsonButton.addEventListener('click', function() {
+            try {
+                if (cvData && typeof cvData === 'object') {
+                    const jsonContent = JSON.stringify(cvData, null, 2);
+                    const blob = new Blob([jsonContent], { type: 'application/json' });
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = 'nikola-prljeta-cv.json';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    showMessage('CV data is not available for JSON export.', 'error');
+                }
+            } catch (err) {
+                console.error('JSON export failed:', err);
+                showMessage('JSON export failed.', 'error');
+            }
+            toggleFab();
+        });
+    }
     const leftColumn = document.getElementById('leftColumn');
     const rightColumn = document.getElementById('rightColumn');
     const contactLinksContainer = document.getElementById('contactLinks');
@@ -56,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function renderLanguageList(languageSectionElem) {
         if (!languageSectionElem) return;
-        // Find the ul created by sectionRenderer for languages
         const langList = languageSectionElem.querySelector('#dynamicLanguageDisplayList');
         if (!langList) return;
         langList.innerHTML = '';
@@ -98,7 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
-        // Render language list as part of the languages section
         if (languageSectionElem) {
             renderLanguageList(languageSectionElem);
         }
@@ -189,12 +285,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (fabExportMdButton) {
         fabExportMdButton.addEventListener('click', function() {
             try {
-                if (cvData && cvData.name) {
-                    const markdownContent = convertCvToMarkdown(cvData);
-                    const fileName = `${cvData.name.replace(/\s+/g, '_')}_CV_${currentLang}.md`;
+                if (!cvData || !cvData.name) {
+                    showMessage('No CV data available for export. Please ensure CV is loaded.', 'error');
+                    console.error('Export to MD: cvData or cvData.name is missing.', cvData);
+                    toggleFab();
+                    return;
+                }
+                const markdownContent = convertCvToMarkdown(cvData, availableLangs, languageNamesMap);
+                if (!markdownContent) {
+                    showMessage('Markdown conversion failed.', 'error');
+                    console.error('Markdown conversion failed. cvData:', cvData);
+                    toggleFab();
+                    return;
+                }
+                const fileName = 'nikola-prljeta-cv.md';
+                try {
                     const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8' });
                     const url = URL.createObjectURL(blob);
-
                     const a = document.createElement('a');
                     a.href = url;
                     a.download = fileName;
@@ -202,26 +309,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     a.click();
                     document.body.removeChild(a);
                     URL.revokeObjectURL(url);
-
                     showMessage('CV exported to Markdown!', 'success');
-                } else {
-                    showMessage('No CV data available for export. Please ensure CV is loaded.', 'error');
-                    console.error('Export to MD: cvData or cvData.name is missing.', cvData);
+                } catch (fileErr) {
+                    showMessage('File download failed.', 'error');
+                    console.error('File download failed:', fileErr);
                 }
             } catch (error) {
-                console.error('Error during Markdown export:', error);
                 showMessage('An error occurred during Markdown export. Check console.', 'error');
+                console.error('Error during Markdown export:', error);
             }
             toggleFab();
         });
     }
 
     if (fabExportEncryptedMdButton) {
-        fabExportEncryptedMdButton.addEventListener('click', function() {
-            currentPasswordAction = 'exportEncrypted';
-            showPasswordModal('exportEncrypted');
-            toggleFab();
-        });
     }
 
     if (cancelPasswordBtn) {
@@ -239,9 +340,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (currentPasswordAction === 'exportEncrypted') {
                 if (cvData && cvData.name) {
-                    const markdownContent = convertCvToMarkdown(cvData);
+                    const markdownContent = convertCvToMarkdown(cvData, availableLangs, languageNamesMap);
                     const obfuscatedContent = xorEncryptDecrypt(markdownContent, password);
-                    const fileName = `${cvData.name.replace(/\s+/g, '_')}_CV_${currentLang}_obfuscated.md`;
+                    const fileName = 'nikola-prljeta-cv-obfuscated.md';
                     const blob = new Blob([obfuscatedContent], { type: 'text/plain;charset=utf-8' });
                     const url = URL.createObjectURL(blob);
 

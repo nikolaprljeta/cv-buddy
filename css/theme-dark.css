@@ -1,18 +1,6 @@
 /*
  * theme-dark.css - Dark Mode Specific Styles
  * This stylesheet is applied when dark mode is active.
- */
-
-body {
-    background-color: #1a1a1a !important; /* Dark background */
-    color: #e0e0e0 !important; /* Light text for general content */
-}
-
-.cv-container {
-    background-color: #2a2a2a !important; /* Slightly lighter dark background for container */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Darker shadow */
-}
-
 /* Header Section */
 .header-section {
     background-color: #1f1f1f !important; /* Explicitly set dark background for header */

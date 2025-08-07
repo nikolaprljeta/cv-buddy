@@ -443,7 +443,6 @@ body {
     opacity: 1;
 }
 
-/* Editor Specific Styles (moved from style.css) - Note: These styles are technically for edit.html, which is removed. Keeping them here for completeness of the base.css file structure, but they won't be applied on cv.html */
 .editor-container {
     padding: 2rem;
     border-radius: 1rem;

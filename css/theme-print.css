@@ -82,14 +82,12 @@
     .contact-links, /* The web-based contact buttons */
     .language-links-list li.language-list-item.active, /* Hide active language emphasis if any */
     button, input, textarea,
-    #messageBox { /* ADDED: Hide the message box */
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        width: 0 !important;
-        overflow: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
+    /* --- Page Margins to remove browser headers/footers and set overall document margins --- */
+    @page {
+        size: A4;
+        margin: 1.5cm !important;
+        marks: none !important;
+    }
     }
 
     /* Hide all links by default, except those explicitly for print */

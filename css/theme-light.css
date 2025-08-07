@@ -30,55 +30,56 @@ body {
 .contact-link {
     background-color: #e9ecef !important; /* Light button background */
     color: #495057 !important; /* Dark icon/text */
-    border: 1px solid #ced4da !important; /* Light border */
+    color: #333333 !important;
 }
 
 .contact-link:hover {
     background-color: #dee2e6 !important; /* Slightly darker on hover */
-    color: #212529 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Main Content Sections */
 .section-title {
     color: #000000 !important; /* Black for section titles */
-    border-bottom: 1px solid #e0e0e0 !important; /* Light border */
 }
 
+}
 /* List Items (Skills, Languages, Tech Stack, References) */
 .language-list-item {
-    color: #333333 !important; /* Dark text */
+}
 }
 
 .language-list-item::before {
-    color: #666666 !important; /* Slightly muted dark bullet */
+}
 }
 
 /* Active language link (if applicable) */
 .language-list-item.active {
-    color: #007bff !important; /* A distinct blue for active language */
+    color: #495057 !important;
     font-weight: bold !important;
 }
 
 /* Entry Items (Employment, Education, Courses, Other Employment) */
+}
 .entry-item {
     border-bottom: 0.5px dashed #f0f0f0 !important; /* Very light dashed border */
-}
+    color: #212529 !important;
 
 .entry-item:last-child {
     border-bottom: none !important;
 }
 
-.entry-item h3 {
+    border-bottom: 1px solid #e0e0e0 !important;
     color: #000000 !important; /* Black for entry titles */
 }
 
 .entry-details,
 .entry-date {
-    color: #555555 !important; /* Medium grey for details/date */
+}
 }
 
 .item-description {
-    color: #333333 !important; /* Dark text for descriptions */
+}
 }
 
 /* Hobbies section */
@@ -89,7 +90,7 @@ body {
 /* FAB (Floating Action Button) */
 .fab-container {
     background-color: transparent !important; /* Make container background transparent */
-    box-shadow: none !important; /* Remove shadow from container */
+}
 }
 
 .fab-main-button {
@@ -102,7 +103,7 @@ body {
 .fab-main-button:hover {
     background-color: #0056b3 !important; /* Darker blue on hover */
 }
-
+}
 .fab-sub-button {
     background-color: #007bff !important; /* Blue for sub buttons */
     color: #ffffff !important;
@@ -111,12 +112,12 @@ body {
 .fab-sub-button:hover {
     background-color: #0056b3 !important; /* Darker blue on hover */
 }
-
+}
 /* Message Box */
 .message-box {
     background-color: #ffffff !important; /* White message box background */
     color: #333333 !important;
-    border: 1px solid #ced4da !important;
+    box-shadow: none !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 

@@ -2,13 +2,13 @@ function fetchCvData(lang) {
     return fetch(`../data/cvData_${lang}.json`)
         .then(response => {
             if (!response.ok) {
-                console.warn(`CV data for ${lang} not found or could not be loaded (status: ${response.status}).`);
+                // console.warn(`CV data for ${lang} not found or could not be loaded (status: ${response.status}).`);
                 return null;
             }
             return response.json();
         })
         .catch(error => {
-            console.error(`Could not fetch CV data for ${lang}:`, error);
+            // console.error(`Could not fetch CV data for ${lang}:`, error);
             return null;
         });
 }
@@ -41,7 +41,7 @@ async function loadInitialCV() {
     } else if (availableLangs.length > 0) {
         currentLang = availableLangs[0];
     } else {
-        console.error("No CV data files found for any supported language.");
+        // console.error("No CV data files found for any supported language.");
         showMessage("No CV data files found. Please ensure cvData_XX.json files are in the 'data' folder.", "error");
         return;
     }
@@ -52,11 +52,11 @@ async function loadInitialCV() {
         try {
             populateCV(data);
         } catch (e) {
-            console.error("Error populating CV:", e);
+            // console.error("Error populating CV:", e);
             showMessage("An error occurred while rendering the CV. Check console for details.", "error");
         }
     } else {
-        console.error("Failed to load initial CV data. Using a minimal fallback structure.");
+        // console.error("Failed to load initial CV data. Using a minimal fallback structure.");
         populateCV({
             name: 'CV Not Loaded',
             summary: 'Please ensure cvData_en.json (or other language files) are correctly located and formatted.',
