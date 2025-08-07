@@ -54,20 +54,53 @@ document.addEventListener('DOMContentLoaded', function() {
         profileImageModal.addEventListener('click', closeModal);
     }
 
+    function renderLanguageList(languageSectionElem) {
+        if (!languageSectionElem) return;
+        // Find the ul created by sectionRenderer for languages
+        const langList = languageSectionElem.querySelector('#dynamicLanguageDisplayList');
+        if (!langList) return;
+        langList.innerHTML = '';
+        availableLangs.forEach(langCode => {
+            let li = document.createElement('li');
+            li.className = 'language-list-item' + (langCode === currentLang ? ' active' : '');
+            li.dataset.lang = langCode;
+            li.textContent = languageNamesMap[langCode] || langCode.toUpperCase();
+            li.addEventListener('click', async () => {
+                if (langCode !== currentLang) {
+                    currentLang = langCode;
+                    const data = await fetchCvData(currentLang);
+                    if (data) {
+                        cvData = data;
+                        populateCV(data);
+                    }
+                }
+            });
+            langList.appendChild(li);
+        });
+    }
+
     function populateCV(data) {
         if (leftColumn) leftColumn.innerHTML = '';
         if (rightColumn) rightColumn.innerHTML = '';
 
+        let languageSectionElem = null;
         if (data.sections && Array.isArray(data.sections)) {
             data.sections.forEach(section => {
                 const sectionElem = createSectionElement(section);
                 if (!sectionElem) return;
                 if (section.column === 'left') {
                     leftColumn.appendChild(sectionElem);
+                    if (section.type === 'languages') {
+                        languageSectionElem = sectionElem;
+                    }
                 } else {
                     rightColumn.appendChild(sectionElem);
                 }
             });
+        }
+        // Render language list as part of the languages section
+        if (languageSectionElem) {
+            renderLanguageList(languageSectionElem);
         }
         const cvName = document.getElementById('cvName');
         const cvSummary = document.getElementById('cvSummary');
