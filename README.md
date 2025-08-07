@@ -10,3 +10,6 @@ A simple HTML/CSS/JS web app for displaying your CV.
 4.  Run `live-server` or open `index.html` in a browser
 5.  Set up GitHub Pages by pushing to the `main` branch and enabling Pages in your repository settings (select the `main` branch as the source and the `/` root folder)
 
+## TODO
+- [ ] Remove all comments from code
+- [ ] Only list items that have links are clickable
