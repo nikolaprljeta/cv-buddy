@@ -20,13 +20,10 @@
   ],
   "sections": [
     {
-      "type": "languages",
+      "type": "list",
       "column": "left",
       "title": "LANGUAGES",
-      "current": {
-        "language": "English",
-        "proficiency": ""
-      }
+      "languageName": "English"
     },
     {
       "type": "list",

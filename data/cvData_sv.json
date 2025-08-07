@@ -20,15 +20,6 @@
   ],
   "sections": [
     {
-      "type": "languages",
-      "column": "left",
-      "title": "SPRÅK",
-      "current": {
-        "language": "Svenska",
-        "proficiency": ""
-      }
-    },
-    {
       "type": "list",
       "column": "left",
       "title": "RELEVANTA FÄRDIGHETER",
@@ -62,33 +53,10 @@
       ]
     },
     {
-      "type": "text",
+      "type": "list",
       "column": "left",
-      "title": "HOBBIES",
-      "text": "Konst, kultur, musik, filmer, fotografi, böcker, teknik, mode, träning, cykling."
-    },
-    {
-      "type": "entries",
-      "column": "right",
-      "title": "RELEVANT ARBETSERFARENHET",
-      "items": [
-        {
-          "title": "Landchef",
-          "company": "Mingtian AB",
-          "employer": "Mingtian AB (extern)",
-          "location": "Belgrad, Serbien",
-          "date": "Januari 2025-",
-          "description": []
-        },
-        {
-          "title": "Mobilutvecklare (iOS & Android)",
-          "company": "Skillogs",
-          "employer": "Skunkworks Den",
-          "location": "Belgrad, Serbien",
-          "date": "December 2023 - Januari 2025",
-          "description": []
-        }
-      ]
+      "title": "LANGUAGES",
+      "languageName": "Swedish"
     },
     {
       "type": "entries",

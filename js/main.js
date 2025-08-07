@@ -1,4 +1,5 @@
 import { fetchCvData } from './cvLoader.js';
+import { getAvailableLanguages } from './languageLoader.js';
 import { createSectionElement } from './sectionRenderer.js';
 import { convertCvToMarkdown } from './markdownExport.js';
 import { xorEncryptDecrypt } from './encryption.js';
@@ -6,8 +7,19 @@ import { showMessage } from './messageBox.js';
 import { showPasswordModal, hidePasswordModal } from './passwordModal.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    let currentLang = 'en';
-    let cvData = {};
+window.switchLanguage = async function(langCode) {
+    if (langCode !== window.currentLang) {
+        window.currentLang = langCode;
+        const data = await fetchCvData(langCode);
+        if (data) {
+            window.cvData = data;
+            populateCV(data);
+        }
+    }
+};
+
+    window.currentLang = 'en';
+    window.cvData = {};
     let availableLangs = [];
     let languageNamesMap = {};
     let currentPasswordAction = null;
@@ -170,31 +182,59 @@ document.addEventListener('DOMContentLoaded', function() {
         profileImageModal.addEventListener('click', closeModal);
     }
 
-    function renderLanguageList(languageSectionElem) {
+    async function renderLanguageList(languageSectionElem) {
         if (!languageSectionElem) return;
         const langList = languageSectionElem.querySelector('#dynamicLanguageDisplayList');
         if (!langList) return;
         langList.innerHTML = '';
-        availableLangs.forEach(langCode => {
-            let li = document.createElement('li');
-            li.className = 'language-list-item' + (langCode === currentLang ? ' active' : '');
-            li.dataset.lang = langCode;
-            li.textContent = languageNamesMap[langCode] || langCode.toUpperCase();
-            li.addEventListener('click', async () => {
-                if (langCode !== currentLang) {
-                    currentLang = langCode;
-                    const data = await fetchCvData(currentLang);
-                    if (data) {
-                        cvData = data;
-                        populateCV(data);
-                    }
+
+        // Dynamically get all available language files
+        let langs = [];
+        try {
+            langs = await getAvailableLanguages();
+        } catch (e) {
+            langs = ['en'];
+        }
+
+        // For each language file, fetch its languageName, and filter out duplicates
+        const seenCodes = new Set();
+        const langData = [];
+        for (const code of langs) {
+            if (seenCodes.has(code)) continue;
+            seenCodes.add(code);
+            const data = await fetchCvData(code);
+            let name = code.toUpperCase();
+            if (data && data.sections) {
+                const langSection = data.sections.find(s => s.title && s.title.toLowerCase().includes('lang'));
+                if (langSection && langSection.languageName) {
+                    name = langSection.languageName;
                 }
-            });
+            }
+            langData.push({ code, name });
+        }
+
+        langData.forEach(({ code, name }) => {
+            const li = document.createElement('li');
+            li.className = 'list-item';
+            if (code === window.currentLang) {
+                li.style.fontWeight = 'bold';
+            }
+            const a = document.createElement('a');
+            a.className = 'list-link';
+            a.textContent = name;
+            a.href = '#';
+            a.onclick = (e) => {
+                e.preventDefault();
+                if (code !== window.currentLang) {
+                    window.switchLanguage(code);
+                }
+            };
+            li.appendChild(a);
             langList.appendChild(li);
         });
     }
 
-    function populateCV(data) {
+    async function populateCV(data) {
         if (leftColumn) leftColumn.innerHTML = '';
         if (rightColumn) rightColumn.innerHTML = '';
 
@@ -205,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!sectionElem) return;
                 if (section.column === 'left') {
                     leftColumn.appendChild(sectionElem);
-                    if (section.type === 'languages') {
+                    if (section.title && section.title.toLowerCase().includes('lang')) {
                         languageSectionElem = sectionElem;
                     }
                 } else {
@@ -213,8 +253,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+        // If no language section found, inject one at the top of the left column
+        if (!languageSectionElem && leftColumn) {
+            const langSectionDiv = document.createElement('div');
+            langSectionDiv.className = 'section-item list-section';
+            const title = document.createElement('h2');
+            title.className = 'section-title';
+            title.textContent = 'LANGUAGES';
+            langSectionDiv.appendChild(title);
+            const langList = document.createElement('ul');
+            langList.id = 'dynamicLanguageDisplayList';
+            langList.className = 'language-links-list';
+            langSectionDiv.appendChild(langList);
+            leftColumn.insertBefore(langSectionDiv, leftColumn.firstChild);
+            languageSectionElem = langSectionDiv;
+        }
         if (languageSectionElem) {
-            renderLanguageList(languageSectionElem);
+            await renderLanguageList(languageSectionElem);
         }
         const cvName = document.getElementById('cvName');
         const cvSummary = document.getElementById('cvSummary');
@@ -223,10 +278,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function loadInitialCV() {
-        const potentialLangs = ['en', 'sr', 'sv', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'pt', 'ru', 'zh'];
+
+        let langs;
+        try {
+            langs = await getAvailableLanguages();
+        } catch (e) {
+            // fallback to static list if dynamic fails
+            langs = ['en', 'sr', 'sv', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'pt', 'ru', 'zh'];
+        }
         const browserLang = navigator.language.split('-')[0];
 
-        const fetchPromises = potentialLangs.map(async (langCode) => {
+        const fetchPromises = langs.map(async (langCode) => {
             const data = await fetchCvData(langCode);
             if (data) {
                 const langSection = data.sections.find(sec => sec.type === 'languages');
@@ -244,27 +306,27 @@ document.addEventListener('DOMContentLoaded', function() {
         availableLangs = results.filter(lang => lang !== null);
 
         if (availableLangs.includes(browserLang)) {
-            currentLang = browserLang;
+            window.currentLang = browserLang;
         } else if (availableLangs.includes('en')) {
-            currentLang = 'en';
+            window.currentLang = 'en';
         } else if (availableLangs.length > 0) {
-            currentLang = availableLangs[0];
+            window.currentLang = availableLangs[0];
         } else {
             console.error("No CV data files found for any supported language.");
             return;
         }
 
-        const data = await fetchCvData(currentLang);
+        const data = await fetchCvData(window.currentLang);
         if (data) {
             try {
-                cvData = data;
-                populateCV(data);
+                window.cvData = data;
+                await populateCV(data);
             } catch (e) {
                 console.error("Error populating CV:", e);
             }
         } else {
             console.error("Failed to load initial CV data. Using a minimal fallback structure.");
-            populateCV({
+            await populateCV({
                 name: 'CV Not Loaded',
                 summary: 'Please ensure cvData_en.json (or other language files) are correctly located and formatted.',
                 contact: [],
