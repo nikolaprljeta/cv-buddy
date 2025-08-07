@@ -30,20 +30,7 @@ function createSectionElement(section) {
         ul.className = 'bullet-list';
         const items = section.items || [];
         items.forEach(item => {
-            const li = document.createElement('li');
-            li.className = 'list-item';
-            if (item && typeof item === 'object' && (item.url || item.link)) {
-                const a = document.createElement('a');
-                a.href = item.url || item.link;
-                a.textContent = item.label || item.text || item.name || item.title || item.url || item.link;
-                a.className = 'list-link';
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                li.appendChild(a);
-            } else {
-                li.textContent = typeof item === 'string' ? item : String(item);
-            }
-            ul.appendChild(li);
+            ul.appendChild(renderListItem(item));
         });
         sectionDiv.appendChild(ul);
     } else if (section.type === 'entries') {
@@ -106,6 +93,27 @@ function createSectionElement(section) {
         sectionDiv.appendChild(p);
     }
     return sectionDiv;
+
+// Helper: Render a list item, clickable if link present, plain otherwise
+function renderListItem(item) {
+    const li = document.createElement('li');
+    li.className = 'list-item';
+    if (typeof item === 'object' && item !== null && item.text) {
+        if (item.url) {
+            const a = document.createElement('a');
+            a.className = 'list-link';
+            a.textContent = item.text;
+            a.href = item.url;
+            a.target = '_blank';
+            li.appendChild(a);
+        } else {
+            li.textContent = item.text;
+        }
+    } else {
+        li.textContent = item;
+    }
+    return li;
+}
 }
 
 export { createSectionElement };
