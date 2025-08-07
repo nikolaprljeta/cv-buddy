@@ -1,9 +1,9 @@
 {
   "name": "NIKOLA PRLJETA",
-  "summary": "Iskusan poslovni analitičar i softverski inženjer vešt u svim fazama razvoja naprednih aplikacija. Posedujem znanje o korisničkom interfejsu, testiranju i procesima otklanjanja grešaka.\n\nSposoban sam za efikasno samostalno upravljanje projektima, kao i za saradnju u timskom okruženju.\n\nDonosim stručnost u dizajnu, instalaciji, testiranju i održavanju iPhone i multiplatformskih aplikacija.\n\nOpremljen sam raznovrsnim i stalno proširujućim setom veština.",
+  "summary": "Iskusan poslovni analitičar i softverski inženjer, sposoban da radi na svim fazama razvoja naprednih aplikacija. Poseduje znanja iz oblasti korisničkog interfejsa, testiranja i otklanjanja grešaka.\n\nSposoban za samostalan rad na individualnim projektima, kao i za efikasnu saradnju u timskom okruženju.\n\nDonosi stručnost u dizajnu, instalaciji, testiranju i održavanju iPhone i višeplatformskih aplikacija.\n\nOpremeljen raznovrsnim i stalno rastućim skupom veština.",
   "contact": [
     {
-      "label": "e-pošta",
+      "label": "eMail",
       "url": "mailto:nikola.prljeta@gmail.com",
       "icon": "fa-solid fa-envelope"
     },
@@ -22,18 +22,24 @@
     {
       "type": "list",
       "column": "left",
+      "title": "LANGUAGES",
+      "languageName": "Serbian"
+    },
+    {
+      "type": "list",
+      "column": "left",
       "title": "RELEVANTNE VEŠTINE",
       "items": [
         "Timski igrač",
         "Orijentisan na detalje",
         "Jasna i efikasna komunikacija",
-        "Nativni i kros-platformski razvoj"
+        "Razvoj nativnih i višeplatformskih aplikacija"
       ]
     },
     {
       "type": "list",
       "column": "left",
-      "title": "TEHNOLOŠKI STAK",
+      "title": "TEHNOLOŠKI STACK",
       "items": [
         "React Native",
         "React",
@@ -53,22 +59,46 @@
       ]
     },
     {
-      "type": "list",
+      "type": "text",
       "column": "left",
-      "title": "LANGUAGES",
-      "languageName": "Serbian"
+      "title": "HOBIJI",
+      "text": "Umetnost, kultura, muzika, filmovi, fotografija, knjige, tehnologija, moda, vežbanje, biciklizam."
     },
     {
       "type": "entries",
       "column": "right",
-      "title": "OSTALA ISTORIJA ZAPOŠLJAVANJA",
+      "title": "RELEVANTNA RADNA ISKUSTVA",
       "items": [
+        {
+          "title": "Instruktor",
+          "company": "SoftUni",
+          "employer": "SoftUni",
+          "location": "Beograd, Srbija",
+          "date": "Jun 2025 -",
+          "description": []
+        },
+        {
+          "title": "Country Manager",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (eksterno)",
+          "location": "Beograd, Srbija",
+          "date": "Januar 2025 -",
+          "description": []
+        },
+        {
+          "title": "Mobilni programer (iOS i Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Beograd, Srbija",
+          "date": "Decembar 2023 - Januar 2025",
+          "description": []
+        },
         {
           "title": "Softverski inženjer, eksterni konsultant",
           "company": "Ledger Lemur",
-          "employer": "Lemur (eksterni)",
-          "location": "Beograd, Srbija/Amsterdam, Holandija",
-          "date": "Jun 2023-Decembar 2023",
+          "employer": "Lemur (eksterno)",
+          "location": "Beograd, Srbija / Amsterdam, Holandija",
+          "date": "Jun 2023 - Decembar 2023",
           "description": []
         },
         {
@@ -76,62 +106,69 @@
           "company": "Aer Lingus",
           "employer": "Endava d.o.o.",
           "location": "Beograd, Srbija",
-          "date": "Decembar 2022-Jun 2023",
+          "date": "Decembar 2022 - Jun 2023",
           "description": []
         },
         {
-          "title": "iOS Developer, UI/UX",
+          "title": "iOS programer, UI/UX",
           "company": "eZdravlje",
           "employer": "Nites d.o.o.",
           "location": "Beograd, Srbija",
-          "date": "2016-2022",
+          "date": "2016 - 2022",
           "description": []
         },
         {
-          "title": "IT Konsultant",
+          "title": "IT konsultant",
           "company": "Telekom Srbija CRM",
           "employer": "Nites d.o.o.",
           "location": "Beograd, Srbija",
-          "date": "2016-2022",
+          "date": "2016 - 2022",
           "description": []
-        },
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "OSTALA RADNA ISKUSTVA",
+      "items": [
         {
-          "title": "Frilens saradnik",
+          "title": "Freelance saradnik",
           "company": "Cathode TV",
           "employer": "Otilio d.o.o.",
           "location": "Beograd, Srbija",
-          "date": "2017-2018",
+          "date": "2017 - 2018",
           "description": []
         },
         {
-          "title": "Frilens saradnik",
+          "title": "Freelance saradnik",
           "company": "NoQue",
           "employer": "Otilio d.o.o.",
-          "location": "Belograd, Srbija",
-          "date": "2017-2018",
+          "location": "Beograd, Srbija",
+          "date": "2017 - 2018",
           "description": []
         },
         {
-          "title": "Frilens saradnik",
+          "title": "Freelance saradnik",
           "company": "Salt",
           "employer": "Otilio d.o.o.",
-          "location": "Belograd, Srbija",
-          "date": "2016-2017",
+          "location": "Beograd, Srbija",
+          "date": "2016 - 2017",
           "description": []
         },
         {
-          "title": "Moderator, Administrator",
-          "company": "Content Flow Management",
+          "title": "Moderator, administrator",
+          "company": "Upravljanje sadržajem",
           "employer": "Steady Health",
-          "location": "Belograd, Srbija / San Francisko, CA",
-          "date": "2015-2016",
+          "location": "Beograd, Srbija / San Francisko, SAD",
+          "date": "2015 - 2016",
           "description": []
         },
         {
-          "title": "Menadžer zajednice",
-          "company": "Belgrade Fair Marketing Campaign",
+          "title": "Community menadžer",
+          "company": "Marketinška kampanja Beogradskog sajma",
           "employer": "Juventa Group",
-          "location": "Belograd, Srbija",
+          "location": "Beograd, Srbija",
           "date": "2006",
           "description": []
         }
@@ -144,7 +181,7 @@
       "items": [
         {
           "title": "IT inženjer, Fakultet informacionih tehnologija",
-          "description": "Diplomirao sam na Fakultetu informacionih tehnologija Univerziteta Metropolitan sa diplomom IT inženjera."
+          "description": "Diplomirao sam na Fakultetu informacionih tehnologija Univerziteta Metropolitan, na smeru IT inženjering."
         },
         {
           "title": "Srednja škola",
@@ -168,39 +205,39 @@
         {
           "title": "The Ultimate React Native Series",
           "institution": "Mosh Hamedani",
-          "date": "N/A",
-          "description": "Sve što vam je potrebno za izgradnju i distribuciju profesionalnih aplikacija sa React Native"
+          "date": "",
+          "description": "Sve što je potrebno za izradu i distribuciju profesionalnih aplikacija uz React Native"
         },
         {
           "title": "React 18: React + TypeScript",
           "institution": "Mosh Hamedani",
-          "date": "N/A",
-          "description": "Detaljan vodič za izgradnju veb aplikacija sa React 18+ i TypeScript-om"
+          "date": "",
+          "description": "Vodič korak po korak za izradu veb aplikacija sa React 18+ i TypeScript-om"
         },
         {
           "title": "Code With Mosh: The Ultimate JS Series",
           "institution": "Mosh Hamedani",
-          "date": "N/A",
-          "description": "Detaljan kurs o JS-u i njegovim najnovijim dostignućima od Mosha Hamedanija"
+          "date": "",
+          "description": "Detaljan kurs o JavaScript-u i njegovim najnovijim funkcionalnostima"
         },
         {
           "title": "Hacking With Swift: 100 Days of Swift",
           "institution": "Paul Hudson",
-          "date": "N/A",
-          "description": "Kurs o Appleovom Swift jeziku koristeći njihove UIKit i SwiftUI frameworke od Paula Hudsona"
+          "date": "",
+          "description": "Kurs o Apple-ovom Swift jeziku koristeći UIKit i SwiftUI okvire"
         },
         {
-          "title": "iOS & Swift - The Complete iOS App Development Bootcamp",
+          "title": "iOS & Swift - Kompletan kurs za razvoj iOS aplikacija",
           "institution": "Dr. Angela Yu",
-          "date": "N/A",
-          "description": "Od početnika do iOS programera aplikacija uz samo jedan kurs! Potpuno ažuriran sa sveobuhvatnim modulom posvećenim SwiftUI-u"
+          "date": "",
+          "description": "Od početnika do iOS programera kroz samo jedan kurs! U potpunosti ažuriran, uključuje modul posvećen SwiftUI-ju"
         }
       ]
     },
     {
       "type": "list",
       "column": "right",
-      "title": "REFERENCE",
+      "title": "PREPORUKE",
       "items": [
         "Rade Radumilo iz Optimal Systems GmbH",
         "Nikola Stamatović iz Otilio d.o.o."

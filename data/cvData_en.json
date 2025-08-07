@@ -70,6 +70,14 @@
       "title": "RELEVANT EMPLOYMENT HISTORY",
       "items": [
         {
+          "title": "Instructor",
+          "company": "SoftUni",
+          "employer": "SoftUni",
+          "location": "Belgrade, Serbia",
+          "date": "June 2025-",
+          "description": []
+        },
+        {
           "title": "Country Manager",
           "company": "Mingtian AB",
           "employer": "Mingtian AB (external)",
@@ -84,14 +92,7 @@
           "location": "Belgrade, Serbia",
           "date": "December 2023 - January 2025",
           "description": []
-        }
-      ]
-    },
-    {
-      "type": "entries",
-      "column": "right",
-      "title": "OTHER EMPLOYMENT HISTORY",
-      "items": [
+        },
         {
           "title": "Software Engineer, External Consultant",
           "company": "Ledger Lemur",
@@ -123,7 +124,14 @@
           "location": "Belgrade, Serbia",
           "date": "2016-2022",
           "description": []
-        },
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "OTHER EMPLOYMENT HISTORY",
+      "items": [
         {
           "title": "Freelance Collaborator",
           "company": "Cathode TV",
@@ -197,31 +205,31 @@
         {
           "title": "The Ultimate React Native Series",
           "institution": "Mosh Hamedani",
-          "date": "N/A",
+          "date": "",
           "description": "Everything you need to build and distribute professional-quality apps with React Native"
         },
         {
           "title": "React 18: React + TypeScript",
           "institution": "Mosh Hamedani",
-          "date": "N/A",
+          "date": "",
           "description": "A step-by-step guide to building web apps with React 18+ and TypeScript"
         },
         {
           "title": "Code With Mosh: The Ultimate JS Series",
           "institution": "Mosh Hamedani",
-          "date": "N/A",
+          "date": "",
           "description": "An in-depth course on JS and its most recent developments by Mosh Hamedani"
         },
         {
           "title": "Hacking With Swift: 100 Days of Swift",
           "institution": "Paul Hudson",
-          "date": "N/A",
+          "date": "",
           "description": "A course on Apple's Swift language using their UIKit and SwiftUI frameworks by Paul Hudson"
         },
         {
           "title": "iOS & Swift - The Complete iOS App Development Bootcamp",
           "institution": "Dr. Angela Yu",
-          "date": "N/A",
+          "date": "",
           "description": "From Beginner to iOS App Developer with Just One Course! Fully Updated with a Comprehensive Module Dedicated to SwiftUI"
         }
       ]
