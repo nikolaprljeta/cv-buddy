@@ -4,6 +4,15 @@
  */
 
 @media print {
+    #messageBox {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
+    }
+    /* Hide export to markdown label in print */
     /* --- Page Margins to remove browser headers/footers and set overall document margins --- */
     @page {
         size: A4; /* Explicitly set paper size to A4 */
@@ -78,16 +87,18 @@
 
     /* --- Hiding Elements Not Needed for Print --- */
     .fab-container,
+    .fab-main-button,
+    .fab-sub-button,
     .modal-overlay,
-    .contact-links, /* The web-based contact buttons */
-    .language-links-list li.language-list-item.active, /* Hide active language emphasis if any */
-    button, input, textarea,
-    /* --- Page Margins to remove browser headers/footers and set overall document margins --- */
-    @page {
-        size: A4;
-        margin: 1.5cm !important;
-        marks: none !important;
-    }
+    .contact-links,
+    .language-links-list li.language-list-item.active,
+    button, input, textarea {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
     }
 
     /* Hide all links by default, except those explicitly for print */
@@ -116,19 +127,21 @@
     }
 
     .profile-image-container {
-        width: 3.5cm !important; /* Force square */
-        height: 3.5cm !important; /* Force square */
+        width: 3.5cm !important;
+        height: 3.5cm !important;
         border: 1pt solid #ccc !important;
-        border-radius: 0.5cm !important; /* Rounded corners */
-        overflow: hidden !important; /* Clip content outside border-radius */
-        flex-shrink: 0 !important; /* Prevent shrinking */
-        margin-right: 0.5cm !important; /* Additional space to the right of image */
+        border-radius: 0.5cm !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
+        margin-right: 0.5cm !important;
+        page-break-after: avoid !important;
     }
     .profile-image {
-        width: 100% !important; /* Fill container */
-        height: 100% !important; /* Fill container */
-        object-fit: cover !important; /* Crop to fit, maintain aspect ratio */
-        border-radius: 0.5cm !important; /* Apply rounded corners to the image itself */
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 0.5cm !important;
+        page-break-after: avoid !important;
     }
 
     .header-text-content {
@@ -177,33 +190,35 @@
 
     /* --- Main Content Columns - AGGRESSIVELY FIXED WIDTHS WITH CSS GRID & DIVIDER --- */
     .main-content {
-        display: grid !important; /* Use CSS Grid */
-        /* Explicitly define column widths in cm */
-        /* Total width is 18cm (from cv-container). Left 1/3, Right 2/3 of this. */
-        grid-template-columns: 6cm 12cm !important; /* Left 1/3 (6cm), Right 2/3 (12cm) of 18cm */
-        grid-column-gap: 1cm !important; /* Space between columns */
-        position: relative !important; /* For positioning the divider pseudo-element */
-        width: 100% !important; /* Take full width of parent (cv-container) */
+        display: grid !important;
+        grid-template-columns: 6cm 0.05cm 12cm !important; /* Add divider column */
+        grid-column-gap: 1cm !important;
+        width: 100% !important;
         height: auto !important;
+        align-items: flex-start !important;
+        word-break: break-word !important;
+        white-space: normal !important;
     }
 
-    /* Vertical Divider Line */
-    .main-content::before {
-        content: "" !important;
-        position: absolute !important;
-        top: 0 !important;
-        bottom: 0 !important;
-        left: calc(6cm + 0.5cm) !important; /* Left column width + half of gap */
-        width: 1pt !important; /* Thin line */
-        background-color: #aaaaaa !important; /* Color of the line */
-        z-index: 1 !important; /* Ensure it's above content if needed, but below text */
+    .print-divider {
+        display: block !important;
+        width: 0.05cm !important; /* Thin line */
+        background: #ccc !important; /* Light gray */
+        height: auto !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        grid-row: 1 / span 2 !important;
+        grid-column: 2 !important;
+        justify-self: center !important;
     }
+
 
     .left-column, .right-column {
-        display: flex !important;
-        flex-direction: column !important;
-        flex-shrink: 0 !important;
-        padding: 0 !important; /* Reset any lingering padding */
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        word-break: break-word !important;
+        white-space: normal !important;
     }
 
 
