@@ -43,7 +43,7 @@
 .language-list-item.list-link:hover::before {
     color: #0056b3;
 }
-}
+
 .language-list-item.list-link {
     color: #007bff !important;
     text-decoration: underline !important;
