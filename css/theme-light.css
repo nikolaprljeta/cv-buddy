@@ -3,119 +3,68 @@
  * This stylesheet is applied when light mode is active.
  */
 
-body {
-    background-color: #f0f2f5 !important; /* Light background */
-    color: #333333 !important; /* Dark text for general content */
-}
-
 .cv-container {
-    background-color: #ffffff !important; /* White background for container */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Header Section */
 .header-section {
-    border-bottom: 1px solid #e0e0e0 !important; /* Light border */
+    border-bottom: 1px solid #e0e0e0 !important;
 }
 
 .name {
-    color: #000000 !important; /* Black for name */
+    color: #000000 !important;
 }
 
 .summary {
-    color: #555555 !important; /* Medium grey for summary */
+    color: #555555 !important;
 }
 
-/* Contact Links */
 .contact-link {
-    background-color: #e9ecef !important; /* Light button background */
-    color: #495057 !important; /* Dark icon/text */
+    background-color: #e9ecef !important;
+    color: #495057 !important;
     color: #333333 !important;
 }
 
 .contact-link:hover {
-    background-color: #dee2e6 !important; /* Slightly darker on hover */
+    background-color: #dee2e6 !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Main Content Sections */
 .section-title {
-    color: #000000 !important; /* Black for section titles */
+    color: #000000 !important;
 }
 
-}
-/* List Items (Skills, Languages, Tech Stack, References) */
-.language-list-item {
-}
-}
-
-.language-list-item::before {
-}
-}
-
-/* Active language link (if applicable) */
-.language-list-item.active {
-    color: #495057 !important;
-    font-weight: bold !important;
-}
-
-/* Entry Items (Employment, Education, Courses, Other Employment) */
-}
-.entry-item {
-    border-bottom: 0.5px dashed #f0f0f0 !important; /* Very light dashed border */
-    color: #212529 !important;
-
-.entry-item:last-child {
-    border-bottom: none !important;
-}
-
-    border-bottom: 1px solid #e0e0e0 !important;
-    color: #000000 !important; /* Black for entry titles */
-}
-
-.entry-details,
-.entry-date {
-}
-}
-
-.item-description {
-}
-}
-
-/* Hobbies section */
 .hobbies-section p {
-    color: #333333 !important; /* Dark text */
+    color: #333333 !important;
 }
 
-/* FAB (Floating Action Button) */
 .fab-container {
-    background-color: transparent !important; /* Make container background transparent */
-}
+    background-color: transparent !important;
 }
 
 .fab-main-button {
-    background-color: #007bff !important; /* Blue for the main FAB button */
-    color: #ffffff !important; /* White icon/text */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important; /* Keep a subtle shadow */
-    border: none !important; /* Ensure no border */
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    border: none !important;
 }
 
 .fab-main-button:hover {
-    background-color: #0056b3 !important; /* Darker blue on hover */
+    background-color: #0056b3 !important;
 }
-}
+
 .fab-sub-button {
-    background-color: #007bff !important; /* Blue for sub buttons */
+    background-color: #007bff !important;
     color: #ffffff !important;
 }
 
 .fab-sub-button:hover {
-    background-color: #0056b3 !important; /* Darker blue on hover */
+    background-color: #0056b3 !important;
 }
-}
-/* Message Box */
+
 .message-box {
-    background-color: #ffffff !important; /* White message box background */
+    background-color: #ffffff !important;
     color: #333333 !important;
     box-shadow: none !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
@@ -123,35 +72,34 @@ body {
 
 .message-box.info {
     background-color: #ffffff !important;
-    border-color: #007bff !important; /* Blue border for info */
+    border-color: #007bff !important;
     color: #007bff !important;
 }
 
 .message-box.success {
-    background-color: #d4edda !important; /* Light green for success */
+    background-color: #d4edda !important;
     border-color: #28a745 !important;
     color: #155724 !important;
 }
 
 .message-box.error {
-    background-color: #f8d7da !important; /* Light red for error */
+    background-color: #f8d7da !important;
     border-color: #dc3545 !important;
     color: #721c24 !important;
 }
 
-/* Modal Overlay */
 .modal-overlay {
-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent dark overlay */
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .modal-content {
-    background-color: #ffffff !important; /* White modal content */
+    background-color: #ffffff !important;
     border: 1px solid #e0e0e0 !important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
 }
 
 .modal-close-button {
-    color: #333333 !important; /* Dark close button */
+    color: #333333 !important;
 }
 
 .modal-close-button:hover {
