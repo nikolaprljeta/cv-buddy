@@ -1,0 +1,391 @@
+/* style.css - General Styling (Non-Color, Non-Reset) */
+
+body {
+    padding: 2rem; /* Add some padding around the main CV container */
+    align-items: center; /* Center vertically */
+}
+
+/* CV Container - should be centered by body flexbox */
+.cv-container:hover {
+    transform: translateY(-0.5rem); /* Subtle lift on hover */
+}
+
+/* Header Section */
+.header-section {
+    position: relative; /* For profile image positioning */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+/* Profile Image Container and Image */
+.profile-image-container {
+    /* Existing box-shadow */
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.06);
+    /* Base border for the profile picture */
+    border: 3px solid #007bff; /* Initial blue border */
+    border-radius: 50%; /* Circular image */
+    overflow: hidden; /* Clip image to circle */
+    cursor: pointer; /* Indicate clickable */
+    /* ADDED: Transitions for border and box-shadow to animate the expansion */
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.profile-image-container:hover {
+    transform: scale(1.05); /* Existing Enlarge on hover */
+    /* ADDED: Expand border and add translucent glow on hover */
+    border: 5px solid #007bff; /* Thicker border */
+    box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.3); /* Larger, more translucent glow */
+}
+
+/* IMPORTANT: The actual image inside the container */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop image to fit */
+    display: block; /* Remove extra space below image */
+}
+
+
+/* Contact Links - MODIFIED for equal width buttons */
+.contact-links {
+    display: flex; /* Arrange links horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the group of contact links */
+    gap: 1rem; /* Space between links */
+    margin-top: 1.5rem; /* Space below summary */
+    width: 100%; /* Ensure it takes full width to distribute buttons */
+    max-width: 40rem; /* Limit overall width if desired, adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within each button */
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 9999px; /* Fully rounded pills */
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease;
+    flex: 1; /* CRITICAL: Allows buttons to grow and shrink to equal width */
+    min-width: 8rem; /* Ensure a minimum width for very short text */
+    text-align: center; /* Fallback for text alignment */
+}
+.contact-link:hover {
+    transform: translateY(-0.2rem); /* Subtle lift on hover */
+}
+
+/* Section Item */
+.section-item {
+    position: relative; /* For bullet points */
+    border-bottom: none !important; /* Ensure no border-bottom on the section item itself */
+}
+
+/* Language Selection Buttons (if any, though not in this HTML) */
+.language-button:hover {
+    transform: translateY(-0.1rem); /* Subtle lift on hover */
+}
+
+/* Modal for profile image */
+.modal-content {
+    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Action Button (FAB) */
+.fab-container {
+    position: fixed; /* Fixed relative to the viewport */
+    bottom: 2rem;    /* Distance from the bottom */
+    right: 2rem;     /* Distance from the right */
+    z-index: 1000;   /* Ensure it's above other content */
+}
+
+/* Main FAB Button */
+.fab-main-button {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: white;
+    background-color: var(--primary-color, #007bff);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.06);
+    position: relative; /* For its own tooltip */
+    z-index: 1001; /* Ensure main button is always on top */
+}
+
+.fab-main-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+
+/* FAB Main Icon (the arrow) - NEW/MODIFIED */
+.fab-icon-main {
+    transition: transform 0.3s ease-out; /* Only transform for rotation */
+    transform: rotate(0deg); /* Initial state: arrow pointing down */
+}
+
+/* When FAB container is active, rotate the arrow icon up - NEW/MODIFIED */
+.fab-container.active .fab-icon-main {
+    transform: rotate(180deg); /* Active state: arrow pointing up */
+}
+
+
+/* Sub buttons container default state (hidden) - MODIFIED for upward pop-out and centering */
+.fab-sub-buttons {
+    display: flex;
+    flex-direction: column; /* Stack sub-buttons vertically */
+    align-items: center; /* Horizontally center sub-buttons within this group */
+    gap: 1rem; /* Space between individual sub-buttons */
+
+    position: absolute; /* Position absolutely relative to fab-container */
+    bottom: calc(6rem + 1rem); /* Main button height (6rem) + gap (1rem) */
+    right: 0; /* Align to the right edge of fab-container (which aligns with main button) */
+    width: 100%; /* Take full width of fab-container (6rem) to center items */
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2rem); /* Start slightly below its final position for slide-up effect */
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* When FAB container is active, show sub buttons and move them up */
+.fab-container.active .fab-sub-buttons {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Slide up to its natural position */
+    pointer-events: auto;
+}
+
+/* Individual Sub FAB Buttons */
+.fab-sub-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease, background-color 0.2s ease;
+    position: relative; /* No longer for tooltip, but good practice for positioning */
+}
+
+.fab-sub-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.25);
+    background-color: #5a6268;
+}
+
+/* Tooltip for FAB sub-buttons ONLY - REMOVED COMPLETELY */
+/* The ::before pseudo-element and its hover styles were here and are now removed */
+
+
+/* Adjust colors for dark theme as needed */
+@media (prefers-color-scheme: dark) {
+    .fab-main-button {
+        background-color: var(--primary-color-dark, #e94560);
+    }
+    .fab-sub-button {
+        background-color: #555555;
+    }
+    .fab-sub-button::hover {
+        background-color: #666666;
+    }
+    /* Only apply tooltip background/color for sub-buttons in dark mode now */
+    /* The ::before rule for dark mode is also removed as it's no longer needed */
+}
+
+
+/* --- FINAL REVISED STYLES for clickable language list items with HANGING INDENT --- */
+
+/* Ensure bullet lists do NOT have default list-style from the UL */
+.bullet-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Style for individual language items within the list - REVERTED to position:relative */
+.language-list-item {
+    cursor: pointer;
+    padding: 0.2rem 0 !important;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+
+    list-style: none !important;
+
+    /* Hanging indent method: */
+    padding-left: 1.5rem !important; /* Space for the bullet + desired gap */
+    text-indent: -1.5rem !important; /* Pull the first line of text back into the padding-left area */
+    margin-left: 2rem !important; /* Overall indent for the text content */
+
+    position: relative; /* Crucial for positioning ::before */
+    display: block; /* Ensure it takes full width and breaks lines */
+    line-height: 1.6; /* Explicit line-height for consistent text height */
+}
+
+/* Pseudo-element for the single bullet - REVERTED to position:absolute with fine-tuned top */
+.language-list-item::before {
+    content: '\2022\00A0';
+    color: #666666 !important; /* Keep bullet color consistent */
+    font-weight: normal;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0.3em !important; /* FINE-TUNED: Adjust this value for vertical centering */
+    transform: none !important;
+    line-height: 1 !important;
+    font-size: 1em !important;
+}
+
+/* Hover effect: turn blue and underline */
+.language-list-item:hover {
+    color: var(--primary-color, #007bff) !important;
+    text-decoration: underline !important; /* Keep underline on hover for language items */
+}
+
+/* Active language: no bold emphasis */
+.language-list-item.active {
+    font-weight: normal !important;
+}
+
+/* Ensure the bullet also changes color on hover for active/inactive items */
+.language-list-item.active::before,
+.language-list-item:hover::before {
+    color: var(--primary-color, #007bff) !important;
+}
+
+/* --- NEW UNIFIED STYLES FOR EMPLOYMENT/EDUCATION/COURSES/OTHER EMPLOYMENT ENTRIES --- */
+
+/* Common container for all entry types */
+.entry-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: none !important; /* Ensure no border between entries */
+}
+
+/* Remove border/padding for the last entry in a section */
+.entry-item:last-child {
+    border-bottom: none !important; /* Ensure no border on the very last entry */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Common styling for entry titles (h3) */
+.entry-item h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333333;
+}
+
+/* Common styling for the main details line (company/institution, location) */
+.entry-details {
+    font-size: 1.4rem;
+    color: #666666;
+    margin-bottom: 0.2rem;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+/* Common styling for the separate date paragraph */
+.entry-date {
+    font-size: 1.4rem;
+    color: #666666;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+/* Styling for description lists within entries (applies to all entry-items) */
+.entry-item .bullet-list {
+    list-style: none !important; /* Ensure no default list style */
+    margin: 0 !important; /* Remove default margin */
+    padding: 0 !important; /* Remove default padding */
+    margin-left: 1.5rem; /* Indent the entire list block */
+    margin-top: 0.5rem; /* Space above list */
+    margin-bottom: 0; /* No extra margin at bottom of list */
+}
+
+/* Styling for individual description list items within entries */
+.entry-item .bullet-list li {
+    font-size: 1.5rem; /* Consistent with main body text */
+    line-height: 1.6;
+    margin-bottom: 0.2rem; /* Space between list items */
+    position: relative; /* Crucial for positioning ::before */
+    display: block; /* Ensure it takes full width and breaks lines */
+    padding-left: 1.5rem !important; /* Space for the bullet + desired gap */
+    text-indent: -1.5rem !important; /* Pull the first line of text back into the padding-left area */
+}
+
+/* Ensure the custom bullet styling applies to these lists too */
+.entry-item .bullet-list li::before {
+    content: '\2022\00A0';
+    color: #666666 !important;
+    font-weight: normal;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0.2em !important;
+    transform: none !important;
+    line-height: 1 !important;
+    font-size: 1em !important;
+}
+
+/* Specific styling for generic item description paragraphs (if not a bullet list) */
+.item-description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    color: #333333;
+}
+
+/* MODIFIED: Section title styling - REMOVED border-bottom and text-decoration here and added !important */
+.section-title {
+    border-bottom: none !important; /* Explicitly remove border under section titles */
+    text-decoration: none !important; /* Explicitly remove underline from section titles */
+    padding-bottom: 0.5rem; /* Space between title and content */
+    margin-bottom: 1.5rem; /* Space below the title */
+    display: inline-block; /* Ensures it only takes width of text */
+    width: auto; /* Allow width to be determined by content */
+}
+
+/* NEW: Vertical separator between columns */
+.left-column {
+    border-right: 1px solid #e0e0e0; /* A subtle vertical line */
+    padding-right: 2rem; /* Space between content and separator */
+    margin-right: 2rem; /* Space between separator and right column content */
+}
+
+/* Adjust for smaller screens: remove vertical separator */
+@media (max-width: 768px) {
+    .left-column {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+    }
+}
+
+/* NEW: Ensure h2 elements within section-item do not have underlines */
+.section-item h2 {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* NEW: Ensure a tags within language-list-item do not have underlines by default */
+.language-list-item a {
+    text-decoration: none !important;
+}
+
+/* Align summary text to both left and right edges */
+.summary {
+    text-align: justify;
+}

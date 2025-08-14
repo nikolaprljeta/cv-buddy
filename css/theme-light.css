@@ -1,0 +1,162 @@
+/* Bullet for language list items */
+.language-list-item::before {
+    content: "•\00A0";
+    color: #555555;
+    font-size: 1em;
+    line-height: 1;
+    margin-right: 0.2em;
+    transition: color 0.2s;
+}
+
+/* Only clickable list items get blue bullet */
+.language-list-item.list-link::before {
+    color: #007bff;
+}
+.language-list-item.list-link:hover::before {
+    color: #0056b3;
+}
+.language-list-item:hover {
+    color: #333333 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/* Only real links inside list items get link styles */
+.language-list-item {
+    color: #333333 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+    position: relative;
+}
+
+.language-list-item::before {
+    content: "\2022"; /* bullet */
+    color: #555555;
+    font-size: 1em;
+    position: absolute;
+    left: -1.2em;
+    top: 0.1em;
+    transition: color 0.2s;
+}
+.language-list-item.list-link::before {
+    color: #007bff;
+}
+.language-list-item.list-link:hover::before {
+    color: #0056b3;
+}
+
+.language-list-item.list-link {
+    color: #007bff !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+}
+.language-list-item.list-link:hover {
+    color: #0056b3 !important;
+    text-decoration: underline !important;
+}
+/*
+ * theme-light.css - Light Mode Specific Styles
+ * This stylesheet is applied when light mode is active.
+ */
+
+.cv-container {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.header-section {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.name {
+    color: #000000 !important;
+}
+
+.summary {
+    color: #555555 !important;
+}
+
+.contact-link {
+    background-color: #e9ecef !important;
+    color: #495057 !important;
+    color: #333333 !important;
+}
+
+.contact-link:hover {
+    background-color: #dee2e6 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.section-title {
+    color: #000000 !important;
+}
+
+.hobbies-section p {
+    color: #333333 !important;
+}
+
+.fab-container {
+    background-color: transparent !important;
+}
+
+.fab-main-button {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    border: none !important;
+}
+
+.fab-main-button:hover {
+    background-color: #0056b3 !important;
+}
+
+.fab-sub-button {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+}
+
+.fab-sub-button:hover {
+    background-color: #0056b3 !important;
+}
+
+.message-box {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+    box-shadow: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.message-box.info {
+    background-color: #ffffff !important;
+    border-color: #007bff !important;
+    color: #007bff !important;
+}
+
+.message-box.success {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+    color: #155724 !important;
+}
+
+.message-box.error {
+    background-color: #f8d7da !important;
+    border-color: #dc3545 !important;
+    color: #721c24 !important;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-content {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.modal-close-button {
+    color: #333333 !important;
+}
+
+.modal-close-button:hover {
+    color: #000000 !important;
+}
