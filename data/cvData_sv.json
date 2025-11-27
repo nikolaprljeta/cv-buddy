@@ -1,0 +1,264 @@
+{
+  "name": "NIKOLA PRLJETA",
+  "summary": "Erfaren mjukvaruingenjör och affärsanalytiker med expertis i alla steg av avancerad apputveckling. Har djup förståelse för användargränssnitt, testning och felsökning.\n\nKan arbeta självständigt med projekt samt samarbeta effektivt i team.\n\nErbjuder expertis inom design, installation, testning och underhåll av iPhone- och plattformsoberoende appar.\n\nUtrustad med en mångsidig och ständigt växande kompetensprofil.",
+  "sections": [
+    {
+      "type": "list",
+      "column": "left",
+      "title": "SPRÅK",
+      "languageName": "Swedish"
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "KONTAKT",
+      "links": [
+        {
+          "label": "eMail",
+          "url": "mailto:nikola.prljeta@gmail.com"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/nikolaprljeta/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/nikolaprljeta/cv-buddy"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "RELEVANTA FÄRDIGHETER",
+      "items": [
+        "Lagspelare",
+        "Detaljorienterad",
+        "Tydlig och effektiv kommunikatör",
+        "Utveckling för både inbyggda och plattformsoberoende appar"
+      ]
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "TEKNIKSTACK",
+      "items": [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "Cocoa Touch",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "React Native",
+        "React",
+        "Git",
+        "Java",
+        "Tapestry",
+        "Database Design",
+        "PHP",
+        "SQL"
+      ]
+    },
+    {
+      "type": "text",
+      "column": "left",
+      "title": "NYCKELORD",
+      "text": "EHR, LMS, CRM, ERP, Fintech, SaaS, Cloud, AI, LLM, Combine, CoreData, MapsKit, Swift, UIKit, SwiftUI, Xcode, iOS, App Store, Push Notifications, ARKit, Firebase, Alamofire, URLSession, CoreAnimation, CoreML, HealthKit, StoreKit, React Native, Flutter, Expo, JavaScript, TypeScript, Node.js, Redux, GraphQL, REST API, JSON, HTML5, CSS3, Tailwind CSS, Bootstrap, Electron, Progressive Web Apps, PWA, Webpack, Babel, Vite, ESLint, Jest, Cypress, Git, GitHub, GitLab, Bitbucket, CI/CD, Docker, Kubernetes, AWS, Azure, GCP, PostgreSQL, MySQL, SQLite, MongoDB, Redis, Realm DB, Socket.IO, Agile, Scrum, Kanban, Unit Testing, Integration Testing, UI Testing, Crashlytics, App Center, Analytics, Mixpanel, Amplitude, OAuth, JWT, Security, Encryption, Accessibility, Localization, Internationalization, Microservices, Serverless, RESTful Services, WebSockets, Background Tasks, Caching, MVVM, MVC, VIPER, Coordinator Pattern, Dependency Injection, Reactive Programming, RxSwift, Combine Framework, Async/Await, Concurrency, Threading, Performance Optimization, Memory Management, In-App Purchases, App Monetization, PushKit, SiriKit, WordPress, Shopify, Squarespace, Wix"
+    },
+    {
+      "type": "text",
+      "column": "left",
+      "title": "FRITIDSINTRESSEN",
+      "text": "Konst, kultur, musik, film, fotografi, böcker, teknik, mode, träning, cykling"
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "RELEVANT ARBETSLIVSERFARENHET",
+      "items": [
+        {
+          "title": "Instruktör",
+          "company": "SoftUni",
+          "employer": "SoftUni",
+          "location": "Belgrad, Serbien",
+          "date": "Juni 2025 -",
+          "description": "Höll praktiska kurser i JavaScript Front-End; mentor och handledare för elever, samt ledde projektbaserat lärande."
+        },
+        {
+          "title": "Country Manager",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (extern)",
+          "location": "Belgrad, Serbien",
+          "date": "Januari 2025 -",
+          "description": "Ledde lokala operationer; ansvar för strategi, teamkoordinering och marknadstillväxtinitiativ."
+        },
+        {
+          "title": "Mobilutvecklare (iOS & Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Belgrad, Serbien",
+          "date": "December 2023 - Januari 2025",
+          "description": "Ledde utvecklingen av Skillogs LMS-appar för iOS, Android och webben; ansvarade för hela produktlivscykeln."
+        },
+        {
+          "title": "Mjukvaruingenjör, extern konsult",
+          "company": "Ledger Lemur",
+          "employer": "Lemur (extern)",
+          "location": "Belgrad, Serbien / Amsterdam, Nederländerna",
+          "date": "Juni 2023 - December 2023",
+          "description": "Stödde ett blockchain-startup i tidig fas med tekniska bidrag, rekrytering och kandidatintervjuer."
+        },
+        {
+          "title": "iOS-utvecklare",
+          "company": "Aer Lingus",
+          "employer": "Endava d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "December 2022 - Juni 2023",
+          "description": "Fokus på front-end optimering, UI-implementering och moderna iOS tekniker."
+        },
+        {
+          "title": "iOS-utvecklare, UI/UX",
+          "company": "eZdravlje",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016 - 2022",
+          "description": "Ansvarade för design och utveckling av iOS-appen för det nationella EHR-systemet, från start till slut."
+        },
+        {
+          "title": "IT-konsult",
+          "company": "Telekom Srbija CRM",
+          "employer": "Nites d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016 - 2022",
+          "description": "Skapade teknisk dokumentation, översatte mellan engelska och serbiska och stödde BA/QA för Telekom Srbija CRM-system."
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "ANNAN ARBETSLIVSERFARENHET",
+      "items": [
+        {
+          "title": "Frilanssamarbetare",
+          "company": "Cathode TV",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2017 - 2018",
+          "description": "Bidrog till Cathode TV-projekt genom forskning, design och kreativt samarbete."
+        },
+        {
+          "title": "Frilanssamarbetare",
+          "company": "NoQue",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2017 - 2018",
+          "description": "Samarbetade på NoQue-projekt, stödde innehållsutveckling och teknisk input."
+        },
+        {
+          "title": "Frilanssamarbetare",
+          "company": "Salt",
+          "employer": "Otilio d.o.o.",
+          "location": "Belgrad, Serbien",
+          "date": "2016 - 2017",
+          "description": "Bidrog till Salt-projekt i teknisk och kreativ frilanskapacitet."
+        },
+        {
+          "title": "Moderator, administratör",
+          "company": "Content Flow Management",
+          "employer": "Steady Health",
+          "location": "Belgrad, Serbien / San Francisco, USA",
+          "date": "2015 - 2016",
+          "description": "Modererade och hanterade hälsorelaterat communityinnehåll, säkerställde efterlevnad och användarengagemang."
+        },
+        {
+          "title": "Software Engineer Intern",
+          "company": "iVar",
+          "employer": "iVar",
+          "location": "Belgrad, Serbien",
+          "date": "2011",
+          "description": "Praktik fokuserad på R&D, design och implementeringsstöd för Emotivio-projektet."
+        },
+        {
+          "title": "Community Manager",
+          "company": "Juventa Group",
+          "employer": "Juventa Group",
+          "location": "Belgrad, Serbien",
+          "date": "2006",
+          "description": "Hanterade community-engagemang och evenemang för Belgrads möbelmässa."
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "RELEVANT UTBILDNING",
+      "items": [
+        {
+          "title": "FIT, Univerzitet Metropolitan",
+          "description": "Examen från Fakulteten för informationsteknologi vid Universitetet Metropolitan, med fokus på mjukvaruingenjörskap, informationssystem, spelutveckling och IT-säkerhet; programmet följer ACM/IEEE-standarder med stark betoning på praktiska färdigheter, innovation och entreprenörskap."
+        },
+        {
+          "title": "Gymnasium",
+          "institution": "Kungsholmens gymnasium",
+          "location": "Stockholm, Sverige",
+          "description": "Prestigefyllt gymnasium med starka akademiska program (Naturvetenskap, Samhällsvetenskap, Ekonomi, Humaniora), med svenska, internationella och musikaliska sektioner; fokus på mångfald, tolerans och förberedelse för globala utmaningar."
+        },
+        {
+          "title": "Grundskola",
+          "institution": "Englebrektsskolan",
+          "location": "Stockholm, Sverige",
+          "description": "Omfattande F–9-skola känd för stark akademisk profil, inkluderande lärandemiljö och fokus på personlig utveckling genom specialiserade profiler inom matematik, sport och konst."
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "KURSER",
+      "items": [
+        {
+          "title": "The Ultimate React Native Series",
+          "institution": "Mosh Hamedani",
+          "date": "",
+          "description": "Allt du behöver för att bygga och distribuera professionella appar med React Native."
+        },
+        {
+          "title": "React 18: React + TypeScript",
+          "institution": "Mosh Hamedani",
+          "date": "",
+          "description": "Steg-för-steg-guide för att bygga webbappar med React 18+ och TypeScript."
+        },
+        {
+          "title": "Code With Mosh: The Ultimate JS Series",
+          "institution": "Mosh Hamedani",
+          "date": "",
+          "description": "Djupgående kurs om JavaScript och dess senaste utveckling."
+        },
+        {
+          "title": "Hacking With Swift: 100 Days of Swift",
+          "institution": "Paul Hudson",
+          "date": "",
+          "description": "Kurs om Apples Swift-språk med UIKit- och SwiftUI-ramverk."
+        },
+        {
+          "title": "iOS & Swift - Den kompletta kursen för iOS-apputveckling",
+          "institution": "Dr. Angela Yu",
+          "date": "",
+          "description": "Från nybörjare till iOS-utvecklare med endast en kurs! Fullständigt uppdaterad, inkluderar omfattande modul om SwiftUI."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "column": "right",
+      "title": "REFERENSER",
+      "items": [
+        "Rade Radumilo från Optimal Systems GmbH",
+        "Nikola Stamatović från Otilio d.o.o."
+      ]
+    }
+  ]
+}

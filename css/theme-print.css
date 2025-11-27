@@ -1,0 +1,471 @@
+/*
+ * theme-print.css - Clean Print Theme (Built from Scratch)
+ * Designed for reliable text wrapping and clean PDF output
+ */
+
+@media print {
+    /* === PAGE SETUP === */
+    @page {
+        size: A4;
+        margin: 2cm 1.5cm;
+    }
+    
+    /* === AGGRESSIVE RESET - OVERRIDE ALL FRAMEWORKS === */
+    *, *::before, *::after {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        font-size: inherit !important;
+        font: inherit !important;
+        vertical-align: baseline !important;
+        box-sizing: border-box !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        background: none !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        list-style: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-radius: 0 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        float: none !important;
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        z-index: auto !important;
+        width: auto !important;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+    }
+    
+    /* === FORCE CONTENT VISIBILITY === */
+    .cv-container,
+    .header-section,
+    .main-content,
+    .left-column,
+    .right-column,
+    .section-item,
+    .profile-image-container,
+    .profile-image,
+    .name,
+    .summary,
+    .header-text-content,
+    .section-title,
+    .bullet-list,
+    .language-links-list,
+    .entry-item,
+    .entry-details,
+    .entry-date,
+    .item-description,
+    p, div, span, h1, h2, h3, h4, h5, h6, li, a {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Inline elements */
+    span, a, strong, em {
+        display: inline !important;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 10pt;
+        line-height: 1.5;
+        color: #222;
+        background: white;
+    }
+    
+    /* === HIDE NON-PRINT ELEMENTS === */
+    .fab-container,
+    .fab-main-button,
+    .fab-sub-button,
+    .modal-overlay,
+    .contact-links,
+    button,
+    input,
+    textarea,
+    #messageBox {
+        display: none !important;
+    }
+    
+    /* === MAIN CONTAINER === */
+    .cv-container {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0.5cm !important;
+        font-family: 'Georgia', 'Times New Roman', serif !important;
+        font-size: 10pt !important;
+        line-height: 1.5 !important;
+        color: #222 !important;
+        background: white !important;
+    }
+    
+    /* === HEADER SECTION === */
+    .header-section {
+        display: block !important;
+        margin: 0 0 1.5cm 0 !important;
+        padding: 0 0 1cm 0 !important;
+        border-bottom: 1px solid #666 !important;
+        page-break-after: avoid !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+    
+    .profile-image-container {
+        display: block !important;
+        width: 3.5cm !important;
+        height: 3.5cm !important;
+        border: 1px solid #999 !important;
+        border-radius: 0.3cm !important;
+        overflow: hidden !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15) !important;
+        margin: 0 1cm 0 0 !important;
+        padding: 0 !important;
+        position: absolute !important;
+        top: 1.89cm !important;
+        left: 0 !important;
+        float: none !important;
+    }
+    
+    .profile-image {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background: white !important;
+    }
+    
+    .header-text-content {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+    
+    .name {
+        font-family: 'Arial', sans-serif !important;
+        font-size: 28pt !important;
+        font-weight: bold !important;
+        margin: 0 0 0.8cm 0 !important;
+        text-transform: uppercase !important;
+        line-height: 1.1 !important;
+        color: #1a1a1a !important;
+        letter-spacing: 1px !important;
+        text-align: left !important;
+        width: 100% !important;
+        display: block !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    
+    .summary {
+        font-size: 10.5pt !important;
+        margin: 0 0 0 4.5cm !important;
+        line-height: 1.6 !important;
+        text-align: justify !important;
+        color: #444 !important;
+        font-weight: normal !important;
+        position: relative !important;
+        min-height: 3.5cm !important;
+    }
+    
+    /* Print email contact */
+    #printEmailContact {
+        display: block !important;
+        visibility: visible !important;
+        font-size: 9pt !important;
+        color: #666 !important;
+        margin-top: 0.4cm !important;
+        padding-top: 0.2cm !important;
+        border-top: 1px dotted #ccc !important;
+    }
+    
+    #printEmailContact p {
+        display: inline !important;
+    }
+    
+    #printEmailContact a {
+        display: inline !important;
+        color: #0066cc !important;
+        text-decoration: underline !important;
+    }
+    
+    /* === TWO-COLUMN LAYOUT === */
+    .main-content {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .left-column {
+        display: table-cell !important;
+        width: 35% !important;
+        vertical-align: top !important;
+        padding: 0 0.8cm 0 0 !important;
+        margin: 0 !important;
+        border-right: 1px solid #ccc !important;
+    }
+    
+    .right-column {
+        display: table-cell !important;
+        width: 65% !important;
+        vertical-align: top !important;
+        padding: 0 0 0 0.8cm !important;
+        margin: 0 !important;
+    }
+    
+    .print-divider {
+        display: none;
+    }
+    
+    /* === SECTIONS === */
+    .section-item {
+        margin-bottom: 1.2cm !important;
+        page-break-inside: avoid !important;
+        /* Allow short sections like references to display */
+        /* min-height: 4cm !important; */
+        /* If section can't fit with content, move entire section to next page */
+        break-inside: avoid !important;
+    }
+    
+    .section-item:first-child {
+        margin-top: 0 !important;
+    }
+    
+    .section-title {
+        font-family: 'Arial', sans-serif !important;
+        font-size: 13pt !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        margin: 0 0 0.6cm 0 !important;
+        border-bottom: 1px solid #999 !important;
+        padding-bottom: 0.2cm !important;
+        color: #333 !important;
+        letter-spacing: 0.5px !important;
+        /* Prevent section title from appearing alone at bottom of page */
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        /* Ensure at least 2 lines of content follow the title */
+        orphans: 3 !important;
+        widows: 3 !important;
+    }
+    
+    /* === LISTS === */
+    .bullet-list,
+    .language-links-list,
+    .list-section ul,
+    .section-item ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 0 0.4cm 0 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .bullet-list li,
+    .language-links-list li,
+    .language-list-item,
+    .list-section ul li,
+    .section-item ul li {
+        position: relative !important;
+        padding-left: 1.2em !important;
+        margin-bottom: 0.3cm !important;
+        font-size: 9.5pt !important;
+        line-height: 1.5 !important;
+        color: #333 !important;
+        display: list-item !important;
+        visibility: visible !important;
+    }
+    
+    .bullet-list li:before,
+    .language-links-list li:before,
+    .language-list-item:before,
+    .list-section ul li:before,
+    .section-item ul li:before {
+        content: "•" !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: #777 !important;
+        font-size: 1em !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        line-height: 1 !important;
+    }
+    
+    /* Remove link styling from language list */
+    .language-links-list a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-weight: normal !important;
+    }
+    
+    /* === CONTACT LINKS - MAKE OBVIOUS FOR PRINTING === */
+    .section-item .bullet-list a {
+        color: #0066cc !important;
+        text-decoration: underline !important;
+        font-weight: bold !important;
+    }
+    
+    /* === REFERENCES SECTION - ENSURE VISIBILITY === */
+    .section-item[data-title*="REFERENCE"],
+    .section-item[data-title*="REFERENS"],
+    .section-item[data-title*="PREPORUKE"],
+    .section-item:has(.section-title:contains("REFERENCES")),
+    .section-item:has(.section-title:contains("REFERENSER")),
+    .section-item:has(.section-title:contains("PREPORUKE")),
+    .section-item:last-child {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        page-break-inside: auto !important;
+        margin-bottom: 1.2cm !important;
+        /* Force short sections to appear */
+        min-height: auto !important;
+        height: auto !important;
+        /* Ensure they're not cut off */
+        overflow: visible !important;
+    }
+    
+    /* === ENTRIES (Jobs, Education, etc.) === */
+    .entry-item {
+        margin-bottom: 1cm !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Remove problematic borders that can appear orphaned */
+    .entry-item:not(:last-child) {
+        /* border-bottom: 1px dotted #ddd !important; */
+        padding-bottom: 0.6cm !important;
+        margin-bottom: 1.2cm !important;
+        /* Use spacing instead of borders for visual separation */
+    }
+    
+    .entry-item h3 {
+        font-family: 'Arial', sans-serif !important;
+        font-size: 11.5pt !important;
+        font-weight: bold !important;
+        margin: 0 0 0.3cm 0 !important;
+        line-height: 1.3 !important;
+        color: #1a1a1a !important;
+    }
+    
+    .entry-details {
+        font-size: 9pt !important;
+        color: #666 !important;
+        font-style: italic !important;
+        margin: 0 0 0.15cm 0 !important;
+        line-height: 1.3 !important;
+    }
+    
+    .entry-date {
+        font-size: 9pt !important;
+        color: #666 !important;
+        font-style: italic !important;
+        margin: 0 0 0.4cm 0 !important;
+        line-height: 1.3 !important;
+    }
+    
+    .item-description {
+        font-size: 9.5pt !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+        text-align: justify !important;
+        color: #333 !important;
+    }
+    
+    /* === TEXT SECTIONS (Hobbies, etc.) === */
+    .text-section p,
+    .hobbies-section p {
+        font-size: 9.5pt !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+        text-align: justify !important;
+        color: #333 !important;
+    }
+    
+    /* === FORCE TEXT WRAPPING === */
+    p, div, span, h1, h2, h3, h4, h5, h6, li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+        hyphens: auto;
+    }
+    
+    /* === PAGE BREAKS === */
+    .section-item {
+        page-break-inside: avoid;
+        /* Ensure entire section stays together when possible */
+        break-inside: avoid;
+    }
+    
+    .entry-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .header-section {
+        page-break-after: avoid;
+    }
+    
+    /* Avoid page breaks after section titles */
+    .section-title {
+        page-break-after: avoid;
+        break-after: avoid;
+        /* Never leave section title orphaned */
+        page-break-before: auto;
+    }
+    
+    /* Ensure first content after section title stays with title */
+    .section-title + .bullet-list,
+    .section-title + .entry-item,
+    .section-title + p {
+        page-break-before: avoid !important;
+        break-before: avoid !important;
+    }
+    
+    /* Additional orphan/widow control */
+    .bullet-list li,
+    .entry-item,
+    .item-description {
+        orphans: 2 !important;
+        widows: 2 !important;
+    }
+    
+    /* === PREVENT ORPHANED SEPARATORS === */
+    /* Keep section title borders with their content */
+    .section-title {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+    }
+    
+    /* Prevent any stray horizontal rules or separators */
+    hr,
+    .divider,
+    .separator {
+        display: none !important;
+    }
+}

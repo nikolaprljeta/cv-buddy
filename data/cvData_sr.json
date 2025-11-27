@@ -1,0 +1,264 @@
+{
+  "name": "NIKOLA PRLJETA",
+  "summary": "Iskusan softverski inženjer i biznis analitičar, sposoban da radi na svim fazama razvoja naprednih aplikacija. Poseduje znanja iz oblasti korisničkog interfejsa, testiranja i otklanjanja grešaka.\n\nSposoban za samostalan rad na individualnim projektima, kao i za efikasnu saradnju u timskom okruženju.\n\nDonosi stručnost u dizajnu, instalaciji, testiranju i održavanju iPhone i višeplatformskih aplikacija.\n\nOpremeljen raznovrsnim i stalno rastućim skupom veština.",
+  "sections": [
+    {
+      "type": "list",
+      "column": "left",
+      "title": "LANGUAGES",
+      "languageName": "Serbian"
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "KONTAKT",
+      "links": [
+        {
+          "label": "eMail",
+          "url": "mailto:nikola.prljeta@gmail.com"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/nikolaprljeta/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/nikolaprljeta/cv-buddy"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "RELEVANTNE VEŠTINE",
+      "items": [
+        "Timski igrač",
+        "Orijentisan na detalje",
+        "Jasna i efikasna komunikacija",
+        "Razvoj nativnih i višeplatformskih aplikacija"
+      ]
+    },
+    {
+      "type": "list",
+      "column": "left",
+      "title": "TEHNOLOŠKI STACK",
+      "items": [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "Cocoa Touch",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "React Native",
+        "React",
+        "Git",
+        "Java",
+        "Tapestry",
+        "Database Design",
+        "PHP",
+        "SQL"
+      ]
+    },
+    {
+      "type": "text",
+      "column": "left",
+      "title": "KLJUČNE REČI",
+      "text": "EHR, LMS, CRM, ERP, Fintech, SaaS, Cloud, AI, LLM, Combine, CoreData, MapsKit, Swift, UIKit, SwiftUI, Xcode, iOS, App Store, Push Notifications, ARKit, Firebase, Alamofire, URLSession, CoreAnimation, CoreML, HealthKit, StoreKit, React Native, Flutter, Expo, JavaScript, TypeScript, Node.js, Redux, GraphQL, REST API, JSON, HTML5, CSS3, Tailwind CSS, Bootstrap, Electron, Progressive Web Apps, PWA, Webpack, Babel, Vite, ESLint, Jest, Cypress, Git, GitHub, GitLab, Bitbucket, CI/CD, Docker, Kubernetes, AWS, Azure, GCP, PostgreSQL, MySQL, SQLite, MongoDB, Redis, Realm DB, Socket.IO, Agile, Scrum, Kanban, Unit Testing, Integration Testing, UI Testing, Crashlytics, App Center, Analytics, Mixpanel, Amplitude, OAuth, JWT, Security, Encryption, Accessibility, Localization, Internationalization, Microservices, Serverless, RESTful Services, WebSockets, Background Tasks, Caching, MVVM, MVC, VIPER, Coordinator Pattern, Dependency Injection, Reactive Programming, RxSwift, Combine Framework, Async/Await, Concurrency, Threading, Performance Optimization, Memory Management, In-App Purchases, App Monetization, PushKit, SiriKit, WordPress, Shopify, Squarespace, Wix"
+    },
+    {
+      "type": "text",
+      "column": "left",
+      "title": "HOBIJI",
+      "text": "Umetnost, kultura, muzika, filmovi, fotografija, knjige, tehnologija, moda, vežbanje, biciklizam"
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "RELEVANTNA RADNA ISKUSTVA",
+      "items": [
+        {
+          "title": "Instruktor",
+          "company": "SoftUni",
+          "employer": "SoftUni",
+          "location": "Beograd, Srbija",
+          "date": "Jun 2025 -",
+          "description": "Održavanje praktičnih treninga iz JavaScript Front-End-a; mentorstvo učenika i vođenje projektnog učenja."
+        },
+        {
+          "title": "Country Manager",
+          "company": "Mingtian AB",
+          "employer": "Mingtian AB (eksterno)",
+          "location": "Beograd, Srbija",
+          "date": "Januar 2025 -",
+          "description": "Upravljanje lokalnim operacijama; vođenje strategije, koordinacija tima i inicijative za rast tržišta."
+        },
+        {
+          "title": "Mobilni programer (iOS i Android)",
+          "company": "Skillogs",
+          "employer": "Skunkworks Den",
+          "location": "Beograd, Srbija",
+          "date": "Decembar 2023 - Januar 2025",
+          "description": "Vodio razvoj Skillogs LMS aplikacija za iOS, Android i web; odgovornost za ceo životni ciklus proizvoda."
+        },
+        {
+          "title": "Softverski inženjer, eksterni konsultant",
+          "company": "Ledger Lemur",
+          "employer": "Lemur (eksterno)",
+          "location": "Beograd, Srbija / Amsterdam, Holandija",
+          "date": "Jun 2023 - Decembar 2023",
+          "description": "Podrška blockchain startapu u ranoj fazi kroz tehničke doprinose, zapošljavanje i intervjue kandidata."
+        },
+        {
+          "title": "iOS programer",
+          "company": "Aer Lingus",
+          "employer": "Endava d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "Decembar 2022 - Jun 2023",
+          "description": "Fokus na optimizaciju front-end performansi, implementaciju UI-ja i moderne iOS prakse."
+        },
+        {
+          "title": "iOS programer, UI/UX",
+          "company": "eZdravlje",
+          "employer": "Nites d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2016 - 2022",
+          "description": "Odgovornost za dizajn i razvoj iOS aplikacije za nacionalni zdravstveni EHR sistem od početka do kraja."
+        },
+        {
+          "title": "IT konsultant",
+          "company": "Telekom Srbija CRM",
+          "employer": "Nites d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2016 - 2022",
+          "description": "Izrada tehničke dokumentacije, prevod sa engleskog na srpski i podrška BA/QA za CRM sistem Telekom Srbija."
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "OSTALA RADNA ISKUSTVA",
+      "items": [
+        {
+          "title": "Freelance saradnik",
+          "company": "Cathode TV",
+          "employer": "Otilio d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2017 - 2018",
+          "description": "Doprinos Cathode TV projektu kroz istraživanje, dizajn i kreativnu saradnju."
+        },
+        {
+          "title": "Freelance saradnik",
+          "company": "NoQue",
+          "employer": "Otilio d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2017 - 2018",
+          "description": "Saradnja na NoQue projektu, podrška razvoju sadržaja i tehnički input."
+        },
+        {
+          "title": "Freelance saradnik",
+          "company": "Salt",
+          "employer": "Otilio d.o.o.",
+          "location": "Beograd, Srbija",
+          "date": "2016 - 2017",
+          "description": "Doprinos Salt projektu u freelance tehn\u010dkim i kreativnim kapacitetima."
+        },
+        {
+          "title": "Moderator, administrator",
+          "company": "Content Flow Management",
+          "employer": "Steady Health",
+          "location": "Beograd, Srbija / San Francisko, SAD",
+          "date": "2015 - 2016",
+          "description": "Moderirao i upravljao sadržajem vezanim za zdravlje, obezbeđivao usklađenost i angažovanje korisnika."
+        },
+        {
+          "title": "Software Engineer Intern",
+          "company": "iVar",
+          "employer": "iVar",
+          "location": "Beograd, Srbija",
+          "date": "2011",
+          "description": "Praktična obuka u R&D, dizajnu i implementaciji projekta Emotivio."
+        },
+        {
+          "title": "Community Manager",
+          "company": "Juventa Group",
+          "employer": "Juventa Group",
+          "location": "Beograd, Srbija",
+          "date": "2006",
+          "description": "Upravljanje angažovanjem zajednice i događajima na Beogradskom sajmu nameštaja."
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "RELEVANTNO OBRAZOVANJE",
+      "items": [
+        {
+          "title": "FIT, Univerzitet Metropolitan",
+          "description": "Specijalizovan za softversko inženjerstvo, informacioni sistemi, razvoj video igara i IT bezbednost; nastavni program prati ACM/IEEE standarde sa snažnim naglaskom na praktične veštine, inovacije i preduzetništvo."
+        },
+        {
+          "title": "Srednja škola",
+          "institution": "Kungsholmens gymnasium",
+          "location": "Stokholm, Švedska",
+          "description": "Prestižna srednja škola sa jakim akademskim programima (Prirodne nauke, Društvene nauke, Ekonomija, Humanističke nauke), sa švedskim, međunarodnim i muzičkim sekcijama; fokus na raznolikosti, toleranciji i pripremi učenika za globalne izazove."
+        },
+        {
+          "title": "Osnovna škola",
+          "institution": "Englebrektsskolan",
+          "location": "Stokholm, Švedska",
+          "description": "Sveobuhvatna F–9 škola poznata po jakom akademskom programu, inkluzivnom okruženju za učenje i naglasku na ličnom razvoju kroz specijalizovane profile iz matematike, sporta i umetnosti."
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "column": "right",
+      "title": "KURSEVI",
+      "items": [
+        {
+          "title": "The Ultimate React Native Series",
+          "institution": "Mosh Hamedani",
+          "date": "",
+          "description": "Sve što je potrebno za izradu i distribuciju profesionalnih aplikacija uz React Native"
+        },
+        {
+          "title": "React 18: React + TypeScript",
+          "institution": "Mosh Hamedani",
+          "date": "",
+          "description": "Vodič korak po korak za izradu veb aplikacija sa React 18+ i TypeScript-om"
+        },
+        {
+          "title": "Code With Mosh: The Ultimate JS Series",
+          "institution": "Mosh Hamedani",
+          "date": "",
+          "description": "Detaljan kurs o JavaScript-u i njegovim najnovijim funkcionalnostima"
+        },
+        {
+          "title": "Hacking With Swift: 100 Days of Swift",
+          "institution": "Paul Hudson",
+          "date": "",
+          "description": "Kurs o Apple-ovom Swift jeziku koristeći UIKit i SwiftUI okvire"
+        },
+        {
+          "title": "iOS & Swift - Kompletan kurs za razvoj iOS aplikacija",
+          "institution": "Dr. Angela Yu",
+          "date": "",
+          "description": "Od početnika do iOS programera kroz samo jedan kurs! U potpunosti ažuriran, uključuje modul posvećen SwiftUI-ju"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "column": "right",
+      "title": "PREPORUKE",
+      "items": [
+        "Rade Radumilo iz Optimal Systems GmbH",
+        "Nikola Stamatović iz Otilio d.o.o."
+      ]
+    }
+  ]
+}
